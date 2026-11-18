@@ -374,7 +374,8 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   pointer-events: none;
   will-change: transform;
 }
-.page-curtain svg { width: 48px; height: 48px; fill: currentColor; }
+.page-curtain svg { width: 48px; height: 48px; fill: currentColor; animation: curtain-spin 0.9s linear infinite; }
+@keyframes curtain-spin { to { transform: rotate(360deg); } }
 html.is-entering .page-curtain, html.is-leaving .page-curtain { visibility: visible; }
 html.is-leaving, html.is-leaving * { cursor: progress !important; }
 
@@ -426,6 +427,7 @@ html.is-leaving, html.is-leaving * { cursor: progress !important; }
   .js [data-split], .js [data-reveal] { visibility: visible; opacity: 1; transform: none; }
   .js .home-mask > img { visibility: visible; }
   .home-svc-title, .home-opt-title { transition: none; }
+  .page-curtain svg { animation: none; }
   .home-clients { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
   .home-clients-track { animation: none; }
 }
