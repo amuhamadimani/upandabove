@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
+  <script>try{var d=document.documentElement;if(sessionStorage.getItem('page-transition')){sessionStorage.removeItem('page-transition');d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}</script>
+  <title>Work — Up+Above</title>
+  <meta name="description" content="Selected work from Up+Above: brand identities, campaigns and creative for ambitious brands.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Work — Up+Above">
+  <meta property="og:description" content="Selected work from Up+Above.">
+  <meta property="og:image" content="assets/figma/banner.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/tailwind.css">
+</head>
+<!-- Work page: a title, one sentence and a grid of projects. Same header, footer and type as index.html. -->
+<body class="home bg-black font-body text-ink">
+  <div class="page-curtain" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.9727 0H14.7471C14.7505 2.63025 14.8307 5.14353 14.388 7.74646C14.241 8.61351 14.2026 9.52316 14.0437 10.3993C14.6092 10.2476 15.3362 10.2111 15.922 10.1043C18.6297 9.61049 21.259 9.68915 24 9.69265V14.4811H14.1596C14.3536 15.9983 14.6397 17.7462 14.716 19.2522C14.7827 20.5661 14.7493 22.1352 14.7471 23.4683C14.755 23.6825 14.7545 23.7383 14.716 23.9482C14.6075 24.0293 10.4732 23.9912 9.9727 23.9902V14.4811H0V9.69265C1.64926 9.69028 3.4881 9.62003 5.11587 9.75323C6.57807 9.87272 8.54392 10.0905 9.9727 10.4045V0Z"/></svg></div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:bg-ink focus:px-4 focus:py-3 focus:text-black">Skip to content</a>
+
+  <header class="home-header fixed inset-x-0 top-0 z-50 flex h-10 items-center bg-black px-6" data-header>
+    <a href="index.html" class="home-brand md:hidden" aria-label="Up+Above, home"><img src="assets/figma/logo-hero.svg" width="1392" height="246" alt="" class="block h-4 w-auto"></a>
+    <nav class="flex flex-1 items-center gap-6 t-micro font-medium text-white max-md:hidden" aria-label="Main">
+      <a href="index.html#about" class="link-draw hit">About</a>
+      <a href="index.html#services" class="link-draw hit">Services</a>
+      <a href="work.html" class="link-draw hit" aria-current="page">Works</a>
+      <a href="index.html#clients" class="link-draw hit">Clients</a>
+    </nav>
+    <a href="#contact" class="home-talk hit flex items-center gap-1 t-micro font-medium text-lime max-md:hidden">
+      Let’s talk <img src="assets/figma/arrow.svg" width="16" height="11" alt="">
+    </a>
+    <button type="button" class="home-burger md:hidden" aria-label="Menu" aria-expanded="false" aria-controls="home-menu" data-menu-toggle><span></span><span></span></button>
+  </header>
+
+  <!-- Phone menu: a card that drops from under the header (opened by the hamburger). -->
+  <div id="home-menu" class="home-menu md:hidden" data-menu aria-hidden="true">
+    <nav class="home-menu-panel" aria-label="Menu">
+      <a href="index.html#about" class="home-menu-link" data-menu-link>About</a>
+      <a href="index.html#services" class="home-menu-link" data-menu-link>Services</a>
+      <a href="work.html" class="home-menu-link" aria-current="page" data-menu-link>Works</a>
+      <a href="index.html#clients" class="home-menu-link" data-menu-link>Clients</a>
+      <div class="home-menu-foot" data-menu-link>
+        <a href="#contact" class="home-menu-cta">Let’s talk <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+        <p class="home-menu-label">Social</p>
+        <a href="#" class="home-menu-social">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+        <a href="#" class="home-menu-social">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main" class="flex flex-col gap-10 pt-16">
+    <section class="flex flex-col gap-10 px-6 pb-4 pt-[clamp(48px,round(down,6vw,4px),96px)]">
+      <h1 class="home-h2" data-split>Our work</h1>
+      <p class="work-lede max-w-[34ch]" data-reveal>We partner with ambitious brands, businesses and people to deliver design, campaigns and digital that drive results and lift every brand experience.</p>
+    </section>
+
+    <section class="px-6 pb-[var(--space-section)]" aria-label="Projects">
+      <div class="grid gap-x-6 gap-y-12 sm:grid-cols-2">
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/figma/work-henri.webp" alt="Henri &amp; Hélène menu on a clipboard with branded coasters" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Henri &amp; Hélène</span>
+            <span class="home-work-desc">A neighborhood French bistro</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/figma/work-kimball.webp" alt="Kimball Modern shopping bag on a leather chair" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Kimball Modern</span>
+            <span class="home-work-desc">An interior design firm exploring the interplay of light and texture</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/figma/work-mind.webp" alt="The Mind Company posters on a concrete wall" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">The Mind Company</span>
+            <span class="home-work-desc">A destination for mental fitness made just for your mind</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/figma/thumb-banner.webp" alt="Spero Ventures billboard on a brick wall" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Spero Ventures</span>
+            <span class="home-work-desc">A venture firm for the purposeful</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/images/stairs.webp" alt="Northwind brand imagery" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Northwind</span>
+            <span class="home-work-desc">A travel studio mapping slower journeys</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/images/window.webp" alt="Lumen brand imagery" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Lumen</span>
+            <span class="home-work-desc">A lighting brand shaping calm spaces</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/images/liquid.webp" alt="Orbit Labs brand imagery" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Orbit Labs</span>
+            <span class="home-work-desc">A research lab turning data into stories</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/images/sofa.webp" alt="Verdant brand imagery" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Verdant</span>
+            <span class="home-work-desc">A plant-based kitchen for everyday meals</span>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (108:193) -->
+  <footer id="contact" class="bg-lime text-[#0b0b0a]" data-nav-light>
+    <div class="grid gap-y-12 px-6 pt-[clamp(72px,round(down,7.778vw,4px),112px)] md:grid-cols-[1fr_42.38%] md:grid-rows-[minmax(calc(196.94*var(--px)),auto)] md:gap-x-6">
+      <h2 class="home-footer-h font-display font-light" data-split>Bring us the brief.<br class="md:hidden"> We’ll<br class="max-md:hidden"> take it above.</h2>
+      <div class="home-contact">
+        <div>
+          <p class="home-contact-label">Social</p>
+          <ul class="home-contact-links">
+            <li><a href="#">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+            <li><a href="#">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="home-contact-label">Contact</p>
+          <ul class="home-contact-links">
+            <li><a href="mailto:info@upandabove.id">Email us <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid px-6 pt-[clamp(64px,round(down,10vw,4px),144px)] md:grid-cols-[1fr_42.38%] md:gap-x-6">
+      <p class="flex flex-wrap gap-6 t-micro md:col-start-2">
+        <span>© Up+Above 2026.</span>
+        <a href="#" class="link-draw hit">Terms &amp; conditions</a>
+        <a href="#" class="link-draw hit">Privacy policy</a>
+        <span>Designed byParvis</span>
+      </p>
+    </div>
+
+    <div class="home-mask overflow-hidden px-[1.239%] pb-[0.607%] pt-[4.957%]">
+      <img src="assets/figma/logo-footer.svg" width="1404" height="248" alt="" class="block h-auto w-full" data-home-mark>
+    </div>
+  </footer>
+
+  <script src="dist/work.js"></script>
+</body>
+</html>

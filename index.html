@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
+  <script>try{var d=document.documentElement;if(sessionStorage.getItem('page-transition')){sessionStorage.removeItem('page-transition');d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}</script>
+  <title>Up+Above — Brand &amp; Marketing Agency</title>
+  <meta name="description" content="Up+Above is your uprising brain+butter partner: brand &amp; marketing consultancy, creative &amp; design, and campaign &amp; brand experience.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Up+Above — Brand &amp; Marketing Agency">
+  <meta property="og:description" content="Upward thinking, above creating.">
+  <meta property="og:image" content="assets/figma/banner.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/tailwind.css">
+</head>
+<!-- Built from Figma "Up+Above — Brand & Marketing Agency" (node 108:2).
+     The frame is 1440 wide; type and blocks scale with the viewport above
+     1024px and stack below 768px. Sections sit 24px apart on black. -->
+<body class="home bg-black font-body text-ink">
+  <div class="page-curtain" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.9727 0H14.7471C14.7505 2.63025 14.8307 5.14353 14.388 7.74646C14.241 8.61351 14.2026 9.52316 14.0437 10.3993C14.6092 10.2476 15.3362 10.2111 15.922 10.1043C18.6297 9.61049 21.259 9.68915 24 9.69265V14.4811H14.1596C14.3536 15.9983 14.6397 17.7462 14.716 19.2522C14.7827 20.5661 14.7493 22.1352 14.7471 23.4683C14.755 23.6825 14.7545 23.7383 14.716 23.9482C14.6075 24.0293 10.4732 23.9912 9.9727 23.9902V14.4811H0V9.69265C1.64926 9.69028 3.4881 9.62003 5.11587 9.75323C6.57807 9.87272 8.54392 10.0905 9.9727 10.4045V0Z"/></svg></div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:bg-ink focus:px-4 focus:py-3 focus:text-black">Skip to content</a>
+
+  <!-- Header (108:3) -->
+  <header class="home-header fixed inset-x-0 top-0 z-50 flex h-10 items-center bg-black px-6" data-header>
+    <a href="#top" class="home-brand is-hidden md:hidden" aria-label="Up+Above, home"><img src="assets/figma/logo-hero.svg" width="1392" height="246" alt="" class="block h-4 w-auto"></a>
+    <nav class="flex flex-1 items-center gap-6 t-micro font-medium text-white max-md:hidden" aria-label="Main">
+      <a href="#about" class="link-draw hit">About</a>
+      <a href="#services" class="link-draw hit">Services</a>
+      <a href="work.html" class="link-draw hit">Works</a>
+      <a href="#clients" class="link-draw hit">Clients</a>
+    </nav>
+    <a href="#contact" class="home-talk hit flex items-center gap-1 t-micro font-medium text-lime max-md:hidden">
+      Let’s talk <img src="assets/figma/arrow.svg" width="16" height="11" alt="">
+    </a>
+    <button type="button" class="home-burger md:hidden" aria-label="Menu" aria-expanded="false" aria-controls="home-menu" data-menu-toggle><span></span><span></span></button>
+  </header>
+
+  <!-- Phone menu: a card that drops from under the header (opened by the hamburger). -->
+  <div id="home-menu" class="home-menu md:hidden" data-menu aria-hidden="true">
+    <nav class="home-menu-panel" aria-label="Menu">
+      <a href="#about" class="home-menu-link" data-menu-link>About</a>
+      <a href="#services" class="home-menu-link" data-menu-link>Services</a>
+      <a href="work.html" class="home-menu-link" data-menu-link>Works</a>
+      <a href="#clients" class="home-menu-link" data-menu-link>Clients</a>
+      <div class="home-menu-foot" data-menu-link>
+        <a href="#contact" class="home-menu-cta">Let’s talk <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+        <p class="home-menu-label">Social</p>
+        <a href="#" class="home-menu-social">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+        <a href="#" class="home-menu-social">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main" class="flex flex-col gap-6 pt-16">
+
+    <!-- Hero wordmark (108:17) -->
+    <section id="top" class="px-6" aria-label="Up+Above">
+      <h1 class="home-mask overflow-hidden">
+        <img src="assets/figma/logo-hero.svg" width="1392" height="246" alt="Up+Above" class="block h-auto w-full" data-hero-mark>
+      </h1>
+    </section>
+
+    <!-- Banner (108:27) -->
+    <div class="home-banner relative h-[clamp(260px,41.667vw,800px)] overflow-hidden" data-reveal-img>
+      <video class="absolute inset-0 size-full object-cover" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.webp" aria-label="Montage of Up+Above brand and campaign work" data-parallax-img data-hero-video>
+        <source src="assets/video/hero.mp4" type="video/mp4">
+        <source src="assets/video/hero.webm" type="video/webm">
+      </video>
+    </div>
+
+    <!-- About (108:28) -->
+    <section id="about" class="bg-black px-6 py-[var(--space-section)]">
+      <div class="flex flex-col items-start gap-8 md:flex-row md:justify-between">
+        <p class="t-micro text-lime">(Who we are)</p>
+        <p class="home-statement w-full font-display font-semibold text-[#f2f2ec] md:w-[82.83%]" data-words>
+          We are your uprising brain<span class="text-lime">+</span>butter partner
+          <img src="assets/figma/pill-1.webp" width="114" height="53" alt="" class="home-pill">
+          that helps brands, IPs and figures upscale, connecting strategy with purpose and pushing every idea
+          <img src="assets/figma/pill-2.webp" width="114" height="53" alt="" class="home-pill">
+          up, above and beyond.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services (108:98) -->
+    <section id="services" class="bg-lime px-6 py-[var(--space-section)] text-black" data-nav-light>
+      <div class="flex flex-col gap-12 md:flex-row md:justify-between">
+        <p class="t-body text-[#1a1a1a] md:w-[340px]">I partner with agencies and brands to create thoughtful websites, interfaces, and visual systems built around real business goals.</p>
+
+        <div class="relative flex flex-col gap-[clamp(40px,6.111vw,88px)] md:w-[67.42%]">
+          <div class="flex flex-col gap-6 md:pr-[calc(270/938.5*100%+24px)]" data-services>
+            <div class="home-svc is-open" data-svc data-img="assets/figma/thumb-service.webp">
+              <h3><button type="button" class="home-svc-title" aria-expanded="true" aria-controls="svc-1" data-svc-trigger>Brand &amp; marketing consultancy</button></h3>
+              <ul id="svc-1" class="home-svc-panel" data-svc-panel>
+                <li data-img="assets/figma/thumb-service.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Visual identity &amp; design</li>
+                <li data-img="assets/figma/thumb-work-kimball.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Creative design solution</li>
+                <li data-img="assets/figma/thumb-work-mind.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Digital &amp; media</li>
+                <li data-img="assets/figma/thumb-banner.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Merchandise</li>
+              </ul>
+            </div>
+            <div class="home-svc" data-svc data-img="assets/figma/thumb-work-henri.webp">
+              <h3><button type="button" class="home-svc-title" aria-expanded="false" aria-controls="svc-2" data-svc-trigger>Creative &amp; design</button></h3>
+              <ul id="svc-2" class="home-svc-panel" data-svc-panel>
+                <li data-img="assets/figma/thumb-work-henri.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Visual identity &amp; design</li>
+                <li data-img="assets/figma/thumb-service.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Creative design solution</li>
+                <li data-img="assets/figma/thumb-work-kimball.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Digital &amp; media</li>
+                <li data-img="assets/figma/thumb-work-mind.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Merchandise</li>
+              </ul>
+            </div>
+            <div class="home-svc" data-svc data-img="assets/figma/thumb-banner.webp">
+              <h3><button type="button" class="home-svc-title" aria-expanded="false" aria-controls="svc-3" data-svc-trigger>Campaign &amp; brand experience</button></h3>
+              <ul id="svc-3" class="home-svc-panel" data-svc-panel>
+                <li data-img="assets/figma/thumb-banner.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Campaign strategy &amp; orchestration</li>
+                <li data-img="assets/figma/thumb-work-henri.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Activations &amp; events</li>
+                <li data-img="assets/figma/thumb-service.webp"><img src="assets/figma/plus.svg" width="16" height="16" alt="">Social media &amp; content</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="home-svc-img relative overflow-hidden max-md:aspect-[270/320] max-md:w-2/3 md:absolute md:right-0 md:top-0 md:h-[320px] md:w-[270px]">
+            <img src="assets/figma/thumb-service.webp" width="540" height="640" alt="" class="absolute inset-0 size-full object-cover" data-svc-img>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services, option B (Figma 109:356): the picture stays put bottom left and only changes on hover. -->
+    <section id="services-b" class="bg-lime px-6 py-[var(--space-section)] text-black" data-nav-light data-opt>
+      <div class="grid gap-12 md:grid-cols-[4fr_4fr_2fr] md:gap-0">
+        <div class="flex flex-col justify-between gap-10 md:self-stretch">
+          <p class="home-opt-label">Service from idea to launch</p>
+          <div class="home-opt-img relative aspect-[211/250] w-[min(211px,60%)] overflow-hidden md:w-[calc(211*var(--px))]">
+            <img src="assets/figma/thumb-service.webp" width="540" height="640" alt="" class="absolute inset-0 size-full object-cover">
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 md:contents" data-opt-zone>
+          <div class="flex flex-col gap-4">
+            <p class="home-opt-label">Our services</p>
+            <div class="flex flex-col gap-8 md:pr-6">
+          <div class="home-opt-item is-active" data-opt-item data-panel="a" data-img="assets/figma/thumb-service.webp">
+            <h3><button type="button" class="home-opt-title" aria-expanded="true" data-opt-trigger>Brand &amp; marketing consultancy</button></h3>
+            <div class="home-opt-plus" aria-hidden="true"><div><img src="assets/figma/plus-row.svg" width="432" height="24" alt=""><img src="assets/figma/plus-row.svg" width="432" height="24" alt=""></div></div>
+          </div>
+          <div class="home-opt-item" data-opt-item data-panel="b" data-img="assets/figma/thumb-work-henri.webp">
+            <h3><button type="button" class="home-opt-title" aria-expanded="false" data-opt-trigger>Campaign &amp; brand experience</button></h3>
+            <div class="home-opt-plus" aria-hidden="true"><div><img src="assets/figma/plus-row.svg" width="432" height="24" alt=""><img src="assets/figma/plus-row.svg" width="432" height="24" alt=""></div></div>
+          </div>
+          <div class="home-opt-item" data-opt-item data-panel="c" data-img="assets/figma/thumb-banner.webp">
+            <h3><button type="button" class="home-opt-title" aria-expanded="false" data-opt-trigger>Creative &amp; design</button></h3>
+            <div class="home-opt-plus" aria-hidden="true"><div><img src="assets/figma/plus-row.svg" width="432" height="24" alt=""><img src="assets/figma/plus-row.svg" width="432" height="24" alt=""></div></div>
+          </div>
+            </div>
+          </div>
+          <div class="mt-8 md:mt-0" data-opt-right>
+        <div class="home-opt-block is-on" data-opt-block="a">
+          <p class="home-opt-label">Dissect</p>
+          <ul class="home-opt-list"><li class="is-active" data-img="assets/figma/thumb-service.webp">Brand audit</li><li data-img="assets/figma/thumb-work-kimball.webp">Brand communication strategy</li><li data-img="assets/figma/thumb-work-mind.webp">Corporate branding strategy</li><li data-img="assets/figma/thumb-banner.webp">Personal branding</li><li data-img="assets/figma/thumb-work-henri.webp">Integrated marketing plan</li></ul>
+        </div>
+        <div class="home-opt-block" data-opt-block="b">
+          <p class="home-opt-label">Anchor</p>
+          <ul class="home-opt-list"><li class="is-active" data-img="assets/figma/thumb-work-henri.webp">Campaign strategy &amp; orchestration</li><li data-img="assets/figma/thumb-banner.webp">Activations &amp; events</li><li data-img="assets/figma/thumb-work-mind.webp">Social media &amp; content</li></ul>
+        </div>
+        <div class="home-opt-block" data-opt-block="c">
+          <p class="home-opt-label">Orchestrate</p>
+          <ul class="home-opt-list"><li class="is-active" data-img="assets/figma/thumb-work-kimball.webp">Visual identity &amp; design</li><li data-img="assets/figma/thumb-work-mind.webp">Creative design solution</li><li data-img="assets/figma/thumb-service.webp">Digital &amp; media</li><li data-img="assets/figma/thumb-banner.webp">Merchandise</li></ul>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured work (108:124) -->
+    <section id="work" class="flex flex-col gap-10 bg-black px-6 py-[var(--space-section)]">
+      <div class="flex min-h-[82px] items-end justify-between gap-6 pb-3">
+        <h2 class="home-h2" data-split>Featured work</h2>
+        <a href="work.html" class="shrink-0 t-small text-lime underline underline-offset-2 hover:no-underline">See more work</a>
+      </div>
+
+      <div class="grid gap-x-6 gap-y-10 md:grid-cols-2">
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/figma/work-henri.webp" width="1600" height="2400" alt="Henri &amp; Hélène menu on a clipboard with branded coasters" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Henri &amp; Hélène</span>
+            <span class="home-work-desc">A neighborhood French bistro</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/figma/work-kimball.webp" width="1600" height="2344" alt="Kimball Modern shopping bag on a leather chair" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Kimball Modern</span>
+            <span class="home-work-desc">An interior design firm exploring the interplay of light and texture</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <!-- Figma crops this frame from a 16:9 box offset left (108:151). -->
+          <span class="home-work-img"><span class="home-work-crop"><img src="assets/figma/banner.webp" width="2880" height="1004" alt="Spero Ventures billboard on a brick wall" loading="lazy"></span></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">Spero Ventures</span>
+            <span class="home-work-desc">A venture firm for the purposeful</span>
+          </span>
+        </a>
+        <a href="work-detail.html" class="home-work group">
+          <span class="home-work-img"><img src="assets/figma/work-mind.webp" width="1600" height="841" alt="The Mind Company posters on a concrete wall" loading="lazy"></span>
+          <span class="home-work-meta">
+            <span class="home-work-title">The Mind Company</span>
+            <span class="home-work-desc">A destination for mental fitness made just for your mind</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Clients (108:167) -->
+    <section id="clients" class="flex flex-col gap-10 bg-black px-6 py-[var(--space-section)]">
+      <div class="flex min-h-[82px] items-end pb-3">
+        <h2 class="home-h2" data-split>Who trusts us.</h2>
+      </div>
+      <!-- One row, looping. These are dummy logos (assets/clients/); swap each <img> for the client's real logo; the JS clones the row for the seamless loop. -->
+      <div class="home-clients" data-clients>
+        <ul class="home-clients-track" data-clients-track>
+          <li><a href="#" aria-label="Northwind"><img src="assets/clients/northwind.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="lumen"><img src="assets/clients/lumen.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="Orbit Labs"><img src="assets/clients/orbit.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="KORA"><img src="assets/clients/kora.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="Fable"><img src="assets/clients/fable.svg" alt="" loading="lazy"></a></li>
+          <li><a href="#" aria-label="Atlas Co."><img src="assets/clients/atlas.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="Verdant"><img src="assets/clients/verdant.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="PULSE"><img src="assets/clients/pulse.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="halo"><img src="assets/clients/halo.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="Monogram"><img src="assets/clients/mono.svg" alt="" loading="lazy"></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (108:193) -->
+  <footer id="contact" class="bg-lime text-[#0b0b0a]" data-nav-light>
+    <div class="grid gap-y-12 px-6 pt-[clamp(72px,round(down,7.778vw,4px),112px)] md:grid-cols-[1fr_42.38%] md:grid-rows-[minmax(calc(196.94*var(--px)),auto)] md:gap-x-6">
+      <h2 class="home-footer-h font-display font-light" data-split>Bring us the brief.<br class="md:hidden"> We’ll<br class="max-md:hidden"> take it above.</h2>
+      <div class="home-contact">
+        <div>
+          <p class="home-contact-label">Social</p>
+          <ul class="home-contact-links">
+            <li><a href="#">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+            <li><a href="#">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="home-contact-label">Contact</p>
+          <ul class="home-contact-links">
+            <li><a href="mailto:info@upandabove.id">Email us <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid px-6 pt-[clamp(64px,round(down,10vw,4px),144px)] md:grid-cols-[1fr_42.38%] md:gap-x-6">
+      <p class="flex flex-wrap gap-6 t-micro md:col-start-2">
+        <span>© Up+Above 2026.</span>
+        <a href="#" class="link-draw hit">Terms &amp; conditions</a>
+        <a href="#" class="link-draw hit">Privacy policy</a>
+        <span>Designed byParvis</span>
+      </p>
+    </div>
+
+    <div class="home-mask overflow-hidden px-[1.239%] pb-[0.607%] pt-[4.957%]">
+      <img src="assets/figma/logo-footer.svg" width="1404" height="248" alt="" class="block h-auto w-full" data-home-mark>
+    </div>
+  </footer>
+
+  <script src="dist/home.js"></script>
+</body>
+</html>

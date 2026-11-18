@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Up+Above — A strategic creative company</title>
+  <meta name="description" content="Up+Above is a strategic creative company: brand & marketing consultancy, campaign & brand experience, and creative & design.">
+  <meta name="theme-color" content="#0B0B0A">
+  <meta property="og:title" content="Up+Above — A strategic creative company">
+  <meta property="og:description" content="Upward thinking, above creating.">
+  <meta property="og:image" content="assets/images/plus-blur.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/tailwind.css">
+</head>
+<!-- Layout structure after ortolan.com.au (full-bleed photo hero with
+     wordmark → editorial statements → two-up project images with overlaid
+     labels → split image/text → contact panel with wordmark), rebuilt in the
+     Up+Above brand: dark ground, lime contact panel, Bricolage Grotesque light
+     for the editorial voice, Inter for body. -->
+<body class="bg-bg font-body text-base text-ink">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-lime focus:px-4 focus:py-3 focus:text-bg">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true"><span>View</span></div>
+
+  <!-- Nav: links over the hero and footer; a small wordmark everywhere between. -->
+  <header class="orto-nav fixed inset-x-0 top-0 z-50 px-[var(--kit-pad)] pt-3" data-nav>
+    <nav class="orto-links flex gap-6 text-[1.125rem] tracking-[-0.01em] md:text-[1.375rem]" aria-label="Main">
+      <a href="#about" class="link-draw">About</a>
+      <a href="#services" class="link-draw hidden sm:inline">Services</a>
+      <a href="#work" class="link-draw">Works</a>
+      <a href="#clients" class="link-draw hidden sm:inline">Clients</a>
+      <a href="#contact" class="link-draw">Contact</a>
+    </nav>
+    <a href="#top" class="orto-logo absolute left-[var(--kit-pad)] top-4 block" aria-label="Up+Above, back to top" tabindex="-1"><svg class="logo h-5 w-auto" viewBox="0 0 1594 282" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M315.46 54.7765C317.246 54.5257 319.484 54.6323 321.307 54.5513C370.052 52.9443 393.368 91.8123 394.127 136.138C394.916 182.311 372.056 222.96 321.706 223.412C304.283 223.569 286.513 218.247 273.705 205.805V253.567V282.515H224.394V57.5998H270.006L272.42 76.726C285.272 62.7452 296.729 56.9328 315.46 54.7765ZM313.267 178.728C322.515 177.889 331.196 175.937 337.023 168.054C355.266 143.372 345.259 95.938 308.109 99.4765C307.849 99.5 307.59 99.5324 307.332 99.5738C297.354 100.377 289.538 103.76 282.943 111.525C269.128 127.787 270.146 156.469 286.679 170.559C294.308 177.075 303.49 179.004 313.267 178.728Z"/><path d="M899.836 0.85144H938.97L938.987 36.6598C938.987 45.2836 939.209 54.6048 938.471 63.1343C937.247 77.2657 934.449 91.4725 932.513 105.532H938.577C947.128 74.7068 962.388 53.7092 996.779 55.1588C1030.54 56.5815 1051.36 83.9055 1057.04 115.126C1062.33 144.137 1059.66 174.742 1043 199.72C1033.15 212.898 1021.83 221.419 1005.35 224.22C968.968 230.401 944.185 210.827 938.002 175.013L932.308 175.014C933.229 188.797 932.769 206.651 933.059 220.949H899.836C899.448 147.583 899.448 74.2168 899.836 0.85144ZM981.008 192.636C990.446 192.066 999.197 189.116 1005.47 181.592C1023.4 160.081 1022.93 114.438 1001.97 94.9172C996.194 89.5321 984.193 85.7884 976.517 87.6112C964.597 89.1201 958.43 94.2387 950.864 103.077C927.549 130.315 938.39 193.35 981.008 192.636Z"/><path d="M-0.407169 1.47974H49.8537L49.8465 87.7968C49.8132 124.63 42.9806 175.84 94.8067 176.586C145.416 177.313 138.11 121.473 138.081 86.4257L138.094 1.47974H188.194V48.4303L188.213 99.8973C188.214 134.581 189.195 173.037 162.85 199.837C131.352 231.881 56.5669 231.386 25.0587 199.785C1.0501 175.705 -0.440012 140.849 -0.416982 109.108L-0.412713 77.9059L-0.407169 1.47974Z"/><path d="M1161.25 54.8543C1208.61 51.8361 1243.05 81.2785 1246.85 128.505C1251.1 181.331 1227.93 220.642 1172.05 225.102C1122.78 226.486 1089.48 200.126 1085.67 149.641C1081.67 96.6475 1105.67 58.812 1161.25 54.8543ZM1171.65 194.917C1180.49 194.598 1188.86 190.819 1194.94 184.392C1213.83 164.16 1212.88 114.55 1192.11 95.632C1184.66 88.8476 1172.06 84.3994 1162.08 85.9062C1151.83 86.9387 1142.16 90.4793 1135.7 98.9453C1118.89 120.956 1119.76 168.42 1142.14 186.736C1150.81 193.832 1160.95 195.37 1171.65 194.917Z"/><path d="M743.992 16.3623H801.059C803.964 23.9191 806.813 32.809 809.487 40.5193L825.364 86.283L872.055 220.949H829.241C824.742 207.708 820.055 192.211 816.025 178.763H801.571H729.432L716.284 220.949H673.483C675.163 215.221 677.965 207.783 679.974 201.97L692.512 165.658L725.914 68.9402C731.859 51.7404 738.444 33.6202 743.992 16.3623ZM738.107 151.101H775.556H807.205C804.723 142.951 775.407 48.9005 774.507 47.9021C772.839 47.6858 772.157 47.6662 770.477 47.7131L738.107 151.101Z"/><path d="M1515.15 54.8062C1516.28 54.74 1517.4 54.7149 1518.52 54.7311C1558.92 55.0663 1582.73 75.3138 1590.12 115.211C1592.2 126.465 1592.18 135.751 1592.05 147.191L1477.59 147.655C1477.88 156.183 1479.76 166.361 1483.56 174.031C1488.07 183.14 1496.04 190.071 1505.69 193.284C1516.1 196.799 1531.18 196.94 1541.12 191.865C1551.36 186.64 1555.86 178.62 1559.38 168.208C1565.62 169.478 1571.85 170.817 1578.07 172.227C1583.24 173.401 1588.42 174.498 1593.62 175.519C1585.51 207.726 1563.9 222.54 1531.4 224.925C1482.32 228.854 1443.06 204.208 1440.19 152.175C1437.35 100.491 1459.54 58.3677 1515.15 54.8062ZM1519.33 124.781C1531.43 124.62 1543.53 124.537 1555.63 124.535C1554.68 112.452 1552.35 102.661 1542.86 93.9731C1536.91 88.5235 1525.45 85.101 1517.49 85.797C1517.14 85.8273 1516.8 85.87 1516.45 85.9246C1493.26 88.1815 1483.65 103.949 1478.71 125.013L1519.33 124.781Z"/><path d="M1261.61 59.2134H1304.64L1342.1 189.437L1346.76 189.41C1350.67 174.57 1355.53 158.695 1359.8 143.835L1384.14 59.2134H1426.32L1418.11 83.0932C1412.91 97.028 1407.85 112.776 1402.97 126.938L1370.54 220.949H1316.58C1312.79 208.136 1306.95 192.475 1302.56 179.601L1276.03 101.826C1271.3 87.938 1265.97 73.138 1261.61 59.2134Z"/><path d="M519.801 19.0212H555.813C555.839 38.8555 556.444 57.8077 553.105 77.436C551.996 83.9743 551.706 90.8338 550.508 97.4408C554.773 96.297 560.257 96.0215 564.675 95.2163C585.099 91.4923 604.931 92.0855 625.606 92.1119V128.221H551.382C552.845 139.662 555.003 152.842 555.579 164.199C556.082 174.107 555.83 185.939 555.813 195.992C555.873 197.607 555.869 198.028 555.579 199.611C554.76 200.222 523.576 199.935 519.801 199.927V128.221H444.579V92.1119C457.019 92.094 470.889 91.5643 483.167 92.5687C494.196 93.4698 509.024 95.1122 519.801 97.48V19.0212Z" class="logo-plus"/></svg></a>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <!-- Full visual banner: the documented reel autoplays behind the wordmark.
+         assets/video/reel.mp4 is a stand-in cut from moodboard stills — replace with the real reel. -->
+    <section id="top" class="relative flex h-dvh min-h-[34rem] flex-col justify-end overflow-hidden" aria-label="Up+Above">
+      <video src="assets/video/reel.mp4" poster="assets/images/reel-poster.webp" class="absolute inset-0 size-full scale-110 object-cover" autoplay muted loop playsinline aria-hidden="true" data-hero-img></video>
+      <div class="absolute inset-0 bg-gradient-to-b from-bg/10 via-transparent to-bg/50" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 top-1/2 flex -translate-y-1/2 flex-col items-center gap-6" data-hero-kicker>
+        <p class="text-center font-display text-[clamp(0.9rem,1.4vw,1.375rem)] font-normal uppercase tracking-[0.02em]">Upward thinking, above creating</p>
+        <a href="#contact" class="btn btn-lime">Contact us <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="relative px-[var(--kit-pad)] pb-[0.6vw]">
+        <h1 class="w-full" aria-label="Up+Above">
+          <span class="kit-mask block w-full"><span class="block w-full"><svg class="logo w-full" viewBox="0 0 1594 282" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M315.46 54.7765C317.246 54.5257 319.484 54.6323 321.307 54.5513C370.052 52.9443 393.368 91.8123 394.127 136.138C394.916 182.311 372.056 222.96 321.706 223.412C304.283 223.569 286.513 218.247 273.705 205.805V253.567V282.515H224.394V57.5998H270.006L272.42 76.726C285.272 62.7452 296.729 56.9328 315.46 54.7765ZM313.267 178.728C322.515 177.889 331.196 175.937 337.023 168.054C355.266 143.372 345.259 95.938 308.109 99.4765C307.849 99.5 307.59 99.5324 307.332 99.5738C297.354 100.377 289.538 103.76 282.943 111.525C269.128 127.787 270.146 156.469 286.679 170.559C294.308 177.075 303.49 179.004 313.267 178.728Z"/><path d="M899.836 0.85144H938.97L938.987 36.6598C938.987 45.2836 939.209 54.6048 938.471 63.1343C937.247 77.2657 934.449 91.4725 932.513 105.532H938.577C947.128 74.7068 962.388 53.7092 996.779 55.1588C1030.54 56.5815 1051.36 83.9055 1057.04 115.126C1062.33 144.137 1059.66 174.742 1043 199.72C1033.15 212.898 1021.83 221.419 1005.35 224.22C968.968 230.401 944.185 210.827 938.002 175.013L932.308 175.014C933.229 188.797 932.769 206.651 933.059 220.949H899.836C899.448 147.583 899.448 74.2168 899.836 0.85144ZM981.008 192.636C990.446 192.066 999.197 189.116 1005.47 181.592C1023.4 160.081 1022.93 114.438 1001.97 94.9172C996.194 89.5321 984.193 85.7884 976.517 87.6112C964.597 89.1201 958.43 94.2387 950.864 103.077C927.549 130.315 938.39 193.35 981.008 192.636Z"/><path d="M-0.407169 1.47974H49.8537L49.8465 87.7968C49.8132 124.63 42.9806 175.84 94.8067 176.586C145.416 177.313 138.11 121.473 138.081 86.4257L138.094 1.47974H188.194V48.4303L188.213 99.8973C188.214 134.581 189.195 173.037 162.85 199.837C131.352 231.881 56.5669 231.386 25.0587 199.785C1.0501 175.705 -0.440012 140.849 -0.416982 109.108L-0.412713 77.9059L-0.407169 1.47974Z"/><path d="M1161.25 54.8543C1208.61 51.8361 1243.05 81.2785 1246.85 128.505C1251.1 181.331 1227.93 220.642 1172.05 225.102C1122.78 226.486 1089.48 200.126 1085.67 149.641C1081.67 96.6475 1105.67 58.812 1161.25 54.8543ZM1171.65 194.917C1180.49 194.598 1188.86 190.819 1194.94 184.392C1213.83 164.16 1212.88 114.55 1192.11 95.632C1184.66 88.8476 1172.06 84.3994 1162.08 85.9062C1151.83 86.9387 1142.16 90.4793 1135.7 98.9453C1118.89 120.956 1119.76 168.42 1142.14 186.736C1150.81 193.832 1160.95 195.37 1171.65 194.917Z"/><path d="M743.992 16.3623H801.059C803.964 23.9191 806.813 32.809 809.487 40.5193L825.364 86.283L872.055 220.949H829.241C824.742 207.708 820.055 192.211 816.025 178.763H801.571H729.432L716.284 220.949H673.483C675.163 215.221 677.965 207.783 679.974 201.97L692.512 165.658L725.914 68.9402C731.859 51.7404 738.444 33.6202 743.992 16.3623ZM738.107 151.101H775.556H807.205C804.723 142.951 775.407 48.9005 774.507 47.9021C772.839 47.6858 772.157 47.6662 770.477 47.7131L738.107 151.101Z"/><path d="M1515.15 54.8062C1516.28 54.74 1517.4 54.7149 1518.52 54.7311C1558.92 55.0663 1582.73 75.3138 1590.12 115.211C1592.2 126.465 1592.18 135.751 1592.05 147.191L1477.59 147.655C1477.88 156.183 1479.76 166.361 1483.56 174.031C1488.07 183.14 1496.04 190.071 1505.69 193.284C1516.1 196.799 1531.18 196.94 1541.12 191.865C1551.36 186.64 1555.86 178.62 1559.38 168.208C1565.62 169.478 1571.85 170.817 1578.07 172.227C1583.24 173.401 1588.42 174.498 1593.62 175.519C1585.51 207.726 1563.9 222.54 1531.4 224.925C1482.32 228.854 1443.06 204.208 1440.19 152.175C1437.35 100.491 1459.54 58.3677 1515.15 54.8062ZM1519.33 124.781C1531.43 124.62 1543.53 124.537 1555.63 124.535C1554.68 112.452 1552.35 102.661 1542.86 93.9731C1536.91 88.5235 1525.45 85.101 1517.49 85.797C1517.14 85.8273 1516.8 85.87 1516.45 85.9246C1493.26 88.1815 1483.65 103.949 1478.71 125.013L1519.33 124.781Z"/><path d="M1261.61 59.2134H1304.64L1342.1 189.437L1346.76 189.41C1350.67 174.57 1355.53 158.695 1359.8 143.835L1384.14 59.2134H1426.32L1418.11 83.0932C1412.91 97.028 1407.85 112.776 1402.97 126.938L1370.54 220.949H1316.58C1312.79 208.136 1306.95 192.475 1302.56 179.601L1276.03 101.826C1271.3 87.938 1265.97 73.138 1261.61 59.2134Z"/><path d="M519.801 19.0212H555.813C555.839 38.8555 556.444 57.8077 553.105 77.436C551.996 83.9743 551.706 90.8338 550.508 97.4408C554.773 96.297 560.257 96.0215 564.675 95.2163C585.099 91.4923 604.931 92.0855 625.606 92.1119V128.221H551.382C552.845 139.662 555.003 152.842 555.579 164.199C556.082 174.107 555.83 185.939 555.813 195.992C555.873 197.607 555.869 198.028 555.579 199.611C554.76 200.222 523.576 199.935 519.801 199.927V128.221H444.579V92.1119C457.019 92.094 470.889 91.5643 483.167 92.5687C494.196 93.4698 509.024 95.1122 519.801 97.48V19.0212Z" class="logo-plus"/></svg></span></span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="px-[var(--kit-pad)] pt-16 md:pt-20" aria-label="About Up+Above">
+      <h2 class="max-w-[24ch] font-display text-[clamp(2rem,4.3vw,4.25rem)] font-light leading-[1.04] tracking-[-0.03em]" data-split>Up+Above is a strategic creative company, helping brands, IPs and figures upscale by connecting (+) strategy with purpose.</h2>
+    </section>
+
+    <!-- ===================== ABOUT: WHY WORK WITH US ===================== -->
+    <section class="mt-14 md:mt-16" aria-label="Why work with us">
+      <div class="kit-grid gap-y-10">
+        <div class="col-span-4 flex flex-col gap-[var(--kit-gap)] md:col-span-6">
+          <a href="#work" class="orto-tile orto-tile--wide" data-cursor-view>
+            <img src="assets/images/corridor.webp" alt="" class="kit-img" loading="lazy">
+            <span class="orto-label"><span>Activations</span><span>Brand experience, on the ground</span></span>
+          </a>
+          <a href="#work" class="orto-tile orto-tile--short" data-cursor-view>
+            <img src="assets/images/plastic.webp" alt="" class="kit-img" loading="lazy">
+            <span class="orto-label orto-label--low orto-label--dark"><span>Creative &amp; Design</span><span>Continued creative partnerships</span></span>
+          </a>
+        </div>
+        <div class="col-span-4 md:col-span-6 md:pl-1" data-reveal>
+          <p class="font-display text-[clamp(1.375rem,1.9vw,1.875rem)] font-light leading-[1.2] tracking-[-0.015em]">In this concrete jungle it is not the big that conquer, but the resilient forces that never stop pushing through. We never settle for less — always seeking deeper, wrecking something better, going above and beyond.</p>
+          <p class="mt-10 text-label uppercase text-lime">Why work with us</p>
+          <ul class="mt-4 space-y-1 text-body-lg text-muted">
+            <li>+ Creative-led problem solving</li>
+            <li>+ Innovative concept</li>
+            <li>+ Collaborative networks</li>
+            <li>+ Immersive-based experience</li>
+            <li>+ Multi-platform engagement</li>
+          </ul>
+          <a href="#contact" class="link-draw mt-8 inline-block text-body-lg text-muted hover:text-lime">Work with us</a>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== SERVICES (drop-down list) ===================== -->
+    <section id="services" class="mt-28 border-t hairline px-[var(--kit-pad)] pt-5 md:mt-40" aria-label="Services">
+      <h2 class="max-w-[30ch] font-display text-[clamp(2rem,4.3vw,4.25rem)] font-light leading-[1.04] tracking-[-0.03em]" data-split>Insight, experience and creativity: the core DNA behind every brand we dissect, anchor and orchestrate.</h2>
+      <div class="kit-grid mt-12 !px-0 md:mt-16">
+        <div class="col-span-4 md:col-span-5 md:col-start-7" data-reveal>
+          <p class="text-body-lg">Consultancy is the strategy that drives clarity and direction. Brand experience translates it into real-world, sensory impact. Creative design amplifies and extends the story across every channel — one full-cycle partner, from the top of the funnel to the bottom.</p>
+          
+        </div>
+      </div>
+      <div class="orto-accordion mt-16 md:mt-20" data-accordion>
+        <div class="orto-acc is-open" data-acc-item>
+          <h3><button type="button" class="orto-acc-head" aria-expanded="true" aria-controls="o-svc-1" data-acc-trigger><span class="text-muted">01</span><span>Brand &amp; Marketing Consultancy</span><span class="svc-icon" aria-hidden="true">+</span></button></h3>
+          <div id="o-svc-1" class="svc-panel" data-acc-panel>
+            <div class="orto-acc-body"><p><span class="text-lime">Dissect.</span> Finding the real challenge and building the strategy around value, purpose and positioning that last.</p><ul><li>Brand Audit</li><li>Brand Communication Strategy</li><li>Corporate Branding Strategy</li><li>Personal Branding</li><li>Integrated Marketing Plan</li></ul></div>
+          </div>
+        </div>
+        <div class="orto-acc" data-acc-item>
+          <h3><button type="button" class="orto-acc-head" aria-expanded="false" aria-controls="o-svc-2" data-acc-trigger><span class="text-muted">02</span><span>Campaign &amp; Brand Experience</span><span class="svc-icon" aria-hidden="true">+</span></button></h3>
+          <div id="o-svc-2" class="svc-panel" data-acc-panel>
+            <div class="orto-acc-body"><p><span class="text-lime">Anchor.</span> Bringing the strategy to life where people can see and feel it.</p><ul><li>Campaign Strategy &amp; Orchestration</li><li>Activations &amp; Events</li><li>Social Media &amp; Content</li></ul></div>
+          </div>
+        </div>
+        <div class="orto-acc" data-acc-item>
+          <h3><button type="button" class="orto-acc-head" aria-expanded="false" aria-controls="o-svc-3" data-acc-trigger><span class="text-muted">03</span><span>Creative &amp; Design</span><span class="svc-icon" aria-hidden="true">+</span></button></h3>
+          <div id="o-svc-3" class="svc-panel" data-acc-panel>
+            <div class="orto-acc-body"><p><span class="text-lime">Orchestrate.</span> Making the brand visible, heard and remembered — everywhere it shows up.</p><ul><li>Visual Identity &amp; Design</li><li>Creative Design Solution</li><li>Digital &amp; Media</li><li>Merchandise</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WORKS ===================== -->
+    <section class="mt-28 border-t hairline px-[var(--kit-pad)] pt-5 md:mt-40" aria-labelledby="works-title">
+      <div class="flex items-end justify-between">
+        <h2 id="works-title" class="font-display text-[clamp(2rem,4.3vw,4.25rem)] font-light leading-[1.04] tracking-[-0.03em]" data-split>Selected works</h2>
+        <a href="#work" class="link-draw pb-2 text-body-lg text-muted hover:text-lime">View all</a>
+      </div>
+    </section>
+    <!-- Project names, taglines and images are stand-ins until real case studies arrive. -->
+    <section id="work" class="orto-pair mt-10 md:mt-12" aria-label="Selected work">
+      <a href="#work" class="orto-tile" data-cursor-view>
+        <img src="assets/images/jump.webp" alt="" class="kit-img" loading="lazy">
+        <span class="orto-label"><span>Launch Activation</span><span>A launch built to be felt</span></span>
+      </a>
+      <a href="#work" class="orto-tile" data-cursor-view>
+        <img src="assets/images/window.webp" alt="" class="kit-img" loading="lazy">
+        <span class="orto-label orto-label--dark"><span>Retail Experience</span><span>A store people walk through</span></span>
+      </a>
+    </section>
+
+    <section class="orto-pair mt-[var(--kit-gap)]" aria-label="More work">
+      <a href="#work" class="orto-tile" data-cursor-view>
+        <img src="assets/images/sofa.webp" alt="" class="kit-img" loading="lazy">
+        <span class="orto-label orto-label--dark"><span>Brand Overhaul</span><span>An identity rebuilt from the audit up</span></span>
+      </a>
+      <a href="#work" class="orto-tile" data-cursor-view>
+        <img src="assets/images/portrait.webp" alt="" class="kit-img" loading="lazy">
+        <span class="orto-label"><span>Creator Roster</span><span>A creative leader, positioned</span></span>
+      </a>
+    </section>
+
+    <!-- ===================== CLIENTS ===================== -->
+    <!-- Logo slots: drop real client logos (single-colour SVG) into each cell. -->
+    <section id="clients" class="mt-28 border-t hairline px-[var(--kit-pad)] pt-5 md:mt-40" aria-labelledby="clients-title">
+      <h2 id="clients-title" class="font-display text-[clamp(2rem,4.3vw,4.25rem)] font-light leading-[1.04] tracking-[-0.03em]" data-split>Brands that trust us.</h2>
+      <ul class="orto-clients mt-12 md:mt-16">
+        <li class="orto-client">Client logo</li>
+        <li class="orto-client">Client logo</li>
+        <li class="orto-client">Client logo</li>
+        <li class="orto-client">Client logo</li>
+        <li class="orto-client">Client logo</li>
+        <li class="orto-client">Client logo</li>
+        <li class="orto-client">Client logo</li>
+        <li class="orto-client">Client logo</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===================== CONTACT PANEL (lime) ===================== -->
+  <footer id="contact" class="mt-28 overflow-hidden bg-lime text-bg md:mt-40" data-nav-light>
+    <div class="kit-grid gap-y-12 pt-24 md:pt-28">
+      <h2 class="col-span-4 font-display text-[clamp(2.25rem,4.3vw,4.25rem)] font-light leading-[1.02] tracking-[-0.03em] md:col-span-5" data-split>Bring us the brief. We’ll take it above.</h2>
+      <div class="col-span-4 space-y-4 text-[clamp(1.0625rem,1.35vw,1.375rem)] leading-[1.25] tracking-[-0.01em] md:col-span-4 md:col-start-7">
+        <p><a href="https://wa.me/62811817750" class="link-draw" target="_blank" rel="noopener">WhatsApp us</a><br><a href="mailto:cindy.anggraeni@upandabove.id" class="link-draw opacity-60">cindy.anggraeni@upandabove.id</a></p>
+        <!-- Social URLs to be supplied. -->
+        <p class="opacity-60"><a href="#" class="link-draw">Instagram</a><br><a href="#" class="link-draw">LinkedIn</a></p>
+        <p>New business<br><a href="mailto:cindy.anggraeni@upandabove.id" class="link-draw opacity-60">Cindy Anggraeni</a></p>
+      </div>
+      <p class="col-span-4 self-start justify-self-start font-display text-label uppercase md:col-span-2 md:col-start-11 md:justify-self-end md:text-right">Upward thinking,<br>above creating.</p>
+    </div>
+    <div class="kit-grid mt-20 text-[0.75rem] md:mt-36">
+      <p class="col-span-4 flex flex-wrap gap-x-6 gap-y-2 md:col-span-6 md:col-start-7">
+        <span>© Up+Above 2026.</span>
+        <a href="#" class="link-draw">Terms &amp; Conditions</a>
+        <a href="#" class="link-draw">Privacy Policy</a>
+      </p>
+    </div>
+    <div class="px-[var(--kit-pad)] pb-[0.6vw] pt-6">
+      <p class="kit-mark w-full" aria-hidden="true">
+        <span class="kit-mask block w-full"><span class="block w-full"><svg class="logo w-full" viewBox="0 0 1594 282" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="--logo-plus:#F2F2EC"><path d="M315.46 54.7765C317.246 54.5257 319.484 54.6323 321.307 54.5513C370.052 52.9443 393.368 91.8123 394.127 136.138C394.916 182.311 372.056 222.96 321.706 223.412C304.283 223.569 286.513 218.247 273.705 205.805V253.567V282.515H224.394V57.5998H270.006L272.42 76.726C285.272 62.7452 296.729 56.9328 315.46 54.7765ZM313.267 178.728C322.515 177.889 331.196 175.937 337.023 168.054C355.266 143.372 345.259 95.938 308.109 99.4765C307.849 99.5 307.59 99.5324 307.332 99.5738C297.354 100.377 289.538 103.76 282.943 111.525C269.128 127.787 270.146 156.469 286.679 170.559C294.308 177.075 303.49 179.004 313.267 178.728Z"/><path d="M899.836 0.85144H938.97L938.987 36.6598C938.987 45.2836 939.209 54.6048 938.471 63.1343C937.247 77.2657 934.449 91.4725 932.513 105.532H938.577C947.128 74.7068 962.388 53.7092 996.779 55.1588C1030.54 56.5815 1051.36 83.9055 1057.04 115.126C1062.33 144.137 1059.66 174.742 1043 199.72C1033.15 212.898 1021.83 221.419 1005.35 224.22C968.968 230.401 944.185 210.827 938.002 175.013L932.308 175.014C933.229 188.797 932.769 206.651 933.059 220.949H899.836C899.448 147.583 899.448 74.2168 899.836 0.85144ZM981.008 192.636C990.446 192.066 999.197 189.116 1005.47 181.592C1023.4 160.081 1022.93 114.438 1001.97 94.9172C996.194 89.5321 984.193 85.7884 976.517 87.6112C964.597 89.1201 958.43 94.2387 950.864 103.077C927.549 130.315 938.39 193.35 981.008 192.636Z"/><path d="M-0.407169 1.47974H49.8537L49.8465 87.7968C49.8132 124.63 42.9806 175.84 94.8067 176.586C145.416 177.313 138.11 121.473 138.081 86.4257L138.094 1.47974H188.194V48.4303L188.213 99.8973C188.214 134.581 189.195 173.037 162.85 199.837C131.352 231.881 56.5669 231.386 25.0587 199.785C1.0501 175.705 -0.440012 140.849 -0.416982 109.108L-0.412713 77.9059L-0.407169 1.47974Z"/><path d="M1161.25 54.8543C1208.61 51.8361 1243.05 81.2785 1246.85 128.505C1251.1 181.331 1227.93 220.642 1172.05 225.102C1122.78 226.486 1089.48 200.126 1085.67 149.641C1081.67 96.6475 1105.67 58.812 1161.25 54.8543ZM1171.65 194.917C1180.49 194.598 1188.86 190.819 1194.94 184.392C1213.83 164.16 1212.88 114.55 1192.11 95.632C1184.66 88.8476 1172.06 84.3994 1162.08 85.9062C1151.83 86.9387 1142.16 90.4793 1135.7 98.9453C1118.89 120.956 1119.76 168.42 1142.14 186.736C1150.81 193.832 1160.95 195.37 1171.65 194.917Z"/><path d="M743.992 16.3623H801.059C803.964 23.9191 806.813 32.809 809.487 40.5193L825.364 86.283L872.055 220.949H829.241C824.742 207.708 820.055 192.211 816.025 178.763H801.571H729.432L716.284 220.949H673.483C675.163 215.221 677.965 207.783 679.974 201.97L692.512 165.658L725.914 68.9402C731.859 51.7404 738.444 33.6202 743.992 16.3623ZM738.107 151.101H775.556H807.205C804.723 142.951 775.407 48.9005 774.507 47.9021C772.839 47.6858 772.157 47.6662 770.477 47.7131L738.107 151.101Z"/><path d="M1515.15 54.8062C1516.28 54.74 1517.4 54.7149 1518.52 54.7311C1558.92 55.0663 1582.73 75.3138 1590.12 115.211C1592.2 126.465 1592.18 135.751 1592.05 147.191L1477.59 147.655C1477.88 156.183 1479.76 166.361 1483.56 174.031C1488.07 183.14 1496.04 190.071 1505.69 193.284C1516.1 196.799 1531.18 196.94 1541.12 191.865C1551.36 186.64 1555.86 178.62 1559.38 168.208C1565.62 169.478 1571.85 170.817 1578.07 172.227C1583.24 173.401 1588.42 174.498 1593.62 175.519C1585.51 207.726 1563.9 222.54 1531.4 224.925C1482.32 228.854 1443.06 204.208 1440.19 152.175C1437.35 100.491 1459.54 58.3677 1515.15 54.8062ZM1519.33 124.781C1531.43 124.62 1543.53 124.537 1555.63 124.535C1554.68 112.452 1552.35 102.661 1542.86 93.9731C1536.91 88.5235 1525.45 85.101 1517.49 85.797C1517.14 85.8273 1516.8 85.87 1516.45 85.9246C1493.26 88.1815 1483.65 103.949 1478.71 125.013L1519.33 124.781Z"/><path d="M1261.61 59.2134H1304.64L1342.1 189.437L1346.76 189.41C1350.67 174.57 1355.53 158.695 1359.8 143.835L1384.14 59.2134H1426.32L1418.11 83.0932C1412.91 97.028 1407.85 112.776 1402.97 126.938L1370.54 220.949H1316.58C1312.79 208.136 1306.95 192.475 1302.56 179.601L1276.03 101.826C1271.3 87.938 1265.97 73.138 1261.61 59.2134Z"/><path d="M519.801 19.0212H555.813C555.839 38.8555 556.444 57.8077 553.105 77.436C551.996 83.9743 551.706 90.8338 550.508 97.4408C554.773 96.297 560.257 96.0215 564.675 95.2163C585.099 91.4923 604.931 92.0855 625.606 92.1119V128.221H551.382C552.845 139.662 555.003 152.842 555.579 164.199C556.082 174.107 555.83 185.939 555.813 195.992C555.873 197.607 555.869 198.028 555.579 199.611C554.76 200.222 523.576 199.935 519.801 199.927V128.221H444.579V92.1119C457.019 92.094 470.889 91.5643 483.167 92.5687C494.196 93.4698 509.024 95.1122 519.801 97.48V19.0212Z" class="logo-plus"/></svg></span></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="dist/ortolan.js"></script>
+</body>
+</html>

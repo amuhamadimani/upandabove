@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Up+Above — Upward thinking, above creating</title>
+  <meta name="description" content="Up+Above is a strategic creative company. Brand & marketing consultancy, campaign & brand experience, and creative & design.">
+  <meta name="theme-color" content="#0B0B0A">
+  <meta property="og:title" content="Up+Above — Brand & Marketing Agency">
+  <meta property="og:description" content="Upward thinking, above creating.">
+  <meta property="og:image" content="assets/images/stairs.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/tailwind.css">
+</head>
+<!-- Layout structure after kit.studio (wordmark → full-bleed work → intro +
+     stacked services → project collage → select clients → table → wordmark
+     panel), rebuilt in the Up+Above brand: dark ground, lime contrast panels,
+     Bricolage Grotesque in two strengths, Inter for body. -->
+<body class="bg-bg font-body text-base text-ink">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-lime focus:px-4 focus:py-3 focus:text-bg">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" data-cursor aria-hidden="true"><span>View</span></div>
+
+  <!-- Minimal nav: three links spread across the grid, like a contact sheet. -->
+  <header class="fixed inset-x-0 top-0 z-50" data-nav>
+    <nav class="kit-grid h-12 items-center text-label uppercase md:h-14" aria-label="Main">
+      <a href="#top" class="col-span-2 font-display text-base font-bold normal-case tracking-tight md:col-span-3" aria-label="Up+Above, back to top">Up<span class="nav-plus text-lime">+</span>Above</a>
+      <a href="#work" class="link-draw col-span-1 justify-self-start md:col-start-7">Work</a>
+      <a href="#studio" class="link-draw col-span-1 justify-self-start md:col-start-9">Studio</a>
+      <a href="#contact" class="link-draw col-span-0 hidden justify-self-end md:col-start-12 md:block">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section id="top" aria-label="Up+Above">
+      <div class="flex min-h-[50vh] items-end px-[var(--kit-pad)] pb-[1.5vw] md:min-h-[64vh]">
+        <h1 class="kit-mark inline-block whitespace-nowrap font-display leading-[0.78] text-ink" data-fit aria-label="Up+Above">
+          <span class="kit-mask"><span class="font-extrabold tracking-[-0.06em]">Up<span class="text-lime">+</span></span></span><span class="kit-mask"><span class="font-extralight tracking-[-0.045em]">Above.</span></span>
+        </h1>
+      </div>
+      <!-- Stand-in image from the brand moodboard; replace with real case-study stills. -->
+      <a href="#work" class="kit-bleed group relative block h-[78vh] overflow-hidden md:h-[100vh]" data-cursor-view aria-label="Launch Activation — see the work">
+        <img src="assets/images/stairs.webp" alt="" class="kit-img h-[120%] w-full object-cover object-[50%_60%]" data-parallax-img>
+        <span class="absolute bottom-[var(--kit-pad)] left-[var(--kit-pad)] text-label uppercase text-ink">[Launch Activation]</span>
+      </a>
+      <a href="#work" class="kit-bleed group relative block h-[56vh] overflow-hidden md:h-[72vh]" data-cursor-view aria-label="Brand Overhaul — see the work">
+        <img src="assets/images/liquid.webp" alt="" class="kit-img h-[120%] w-full object-cover" data-parallax-img>
+        <span class="absolute bottom-[var(--kit-pad)] left-[var(--kit-pad)] text-label uppercase text-bg">[Brand Overhaul]</span>
+      </a>
+    </section>
+
+    <!-- ===================== INTRO + STACKED SERVICES ===================== -->
+    <section id="studio" class="kit-grid gap-y-16 pb-28 pt-24 md:pb-40 md:pt-36">
+      <p class="col-span-4 font-display text-h3 font-normal md:col-span-5" data-split>We partner with brands, IPs and the people behind them — connecting (+) strategy with purpose to shape, show and grow brand journeys that inspire, connect and move culture forward.</p>
+      <div class="col-span-4 flex flex-col items-end text-right font-display font-light uppercase leading-[0.88] tracking-[-0.035em] text-[clamp(2.75rem,8.6vw,9.5rem)] md:col-span-12" aria-label="Consulting, Brand Experience, Creative and Design">
+        <span class="kit-mask" aria-hidden="true"><span>Consulting</span></span>
+        <span class="kit-mask" aria-hidden="true"><span>Brand <span class="text-lime">Experience</span></span></span>
+        <span class="kit-mask" aria-hidden="true"><span>Creative &amp; Design</span></span>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECT COLLAGE ===================== -->
+    <!-- Project names, copy and images are stand-ins until real case studies arrive. -->
+    <section id="work" class="pb-28 md:pb-40" aria-label="Selected work">
+      <div class="kit-grid mb-10 items-end md:mb-16">
+        <p class="col-span-2 text-label uppercase text-lime">[Selected work]</p>
+        <p class="col-span-2 justify-self-end text-label uppercase text-muted md:col-span-2 md:col-start-11">(2024 — 26)</p>
+      </div>
+
+      <!-- 01 -->
+      <article class="kit-grid gap-y-4 md:gap-y-0">
+        <p class="col-span-4 text-base md:col-span-2 md:pt-7" data-reveal>A launch built to be felt, not just seen. Campaign strategy and on-ground activation for a brand stepping into a new market.</p>
+        <a href="#work" class="kit-tile col-span-4 md:col-span-5" data-cursor-view>
+          <span class="mb-2 block text-label uppercase">[Launch Activation]</span>
+          <span class="block aspect-square overflow-hidden rounded-[2px]"><img src="assets/images/jump.webp" alt="" class="kit-img size-full object-cover" loading="lazy"></span>
+        </a>
+        <a href="#work" class="kit-tile col-span-2 md:col-span-2 md:col-start-9 md:pt-7" data-cursor-view aria-label="Launch Activation, detail">
+          <span class="block aspect-[5/4] overflow-hidden rounded-[2px]"><img src="assets/images/plastic.webp" alt="" class="kit-img size-full object-cover" loading="lazy"></span>
+        </a>
+      </article>
+
+      <!-- 02 -->
+      <article class="kit-grid mt-20 gap-y-4 md:-mt-24 md:gap-y-0">
+        <p class="col-span-4 text-base md:col-span-2 md:col-start-7 md:self-end" data-reveal>A retail space turned into a sensory brand moment — activations and events that people walk through.</p>
+        <a href="#work" class="kit-tile col-span-2 md:col-span-2 md:col-start-9 md:self-end" data-cursor-view>
+          <span class="mb-2 block text-label uppercase">[Retail Experience]</span>
+          <span class="block aspect-square overflow-hidden rounded-[2px]"><img src="assets/images/window.webp" alt="" class="kit-img size-full object-cover" loading="lazy"></span>
+        </a>
+        <a href="#work" class="kit-tile col-span-2 md:col-span-3 md:col-start-11 md:-mr-[var(--kit-gap)] md:pr-0" data-cursor-view aria-label="Retail Experience, space">
+          <span class="block aspect-[3/4] overflow-hidden rounded-[2px] md:mt-6"><img src="assets/images/corridor.webp" alt="" class="kit-img size-full object-cover" loading="lazy"></span>
+        </a>
+      </article>
+
+      <!-- 03 -->
+      <article class="kit-grid mt-20 gap-y-4 md:mt-32 md:gap-y-0">
+        <a href="#work" class="kit-tile col-span-4 md:col-span-7 md:col-start-2" data-cursor-view>
+          <span class="mb-2 block text-label uppercase">[Brand Overhaul]</span>
+          <span class="block aspect-[16/10] overflow-hidden rounded-[2px]"><img src="assets/images/sofa.webp" alt="" class="kit-img size-full object-cover" loading="lazy"></span>
+        </a>
+        <p class="col-span-4 text-base md:col-span-2 md:col-start-10 md:self-end" data-reveal>A visual identity rebuilt from the audit up — strategy, system and every touchpoint it shows up on.</p>
+      </article>
+
+      <!-- 04 -->
+      <article class="kit-grid mt-20 gap-y-4 md:mt-32 md:gap-y-0">
+        <p class="col-span-4 text-base md:col-span-2 md:col-start-2 md:pt-7" data-reveal>Personal brand representation for a creative leader — positioning, content and the platforms to carry it.</p>
+        <a href="#work" class="kit-tile col-span-4 md:col-span-4 md:col-start-5" data-cursor-view>
+          <span class="mb-2 block text-label uppercase">[Creator Roster]</span>
+          <span class="block aspect-[4/5] overflow-hidden rounded-[2px]"><img src="assets/images/portrait.webp" alt="" class="kit-img size-full object-cover" loading="lazy"></span>
+        </a>
+        <a href="#work" class="kit-tile col-span-2 md:col-span-3 md:col-start-10 md:self-end" data-cursor-view aria-label="Creator Roster, detail">
+          <span class="block aspect-square overflow-hidden rounded-[2px]"><img src="assets/images/plus-blur.webp" alt="" class="kit-img size-full object-cover" loading="lazy"></span>
+        </a>
+      </article>
+    </section>
+
+    <!-- ===================== SELECT CLIENTS (lime panel) ===================== -->
+    <!-- Client names are slots: replace with real clients (and their work images). -->
+    <section id="clients" class="bg-lime text-bg" data-nav-light aria-label="Select clients">
+      <div class="kit-grid gap-y-10 py-20 md:items-start md:py-0">
+        <div class="col-span-4 md:col-span-5 md:py-48">
+          <p class="mb-10 text-label uppercase">[ Select clients ]</p>
+          <ul class="kit-clients text-[clamp(1.25rem,1.9vw,1.75rem)] leading-[1.25] tracking-[-0.01em]" data-clients>
+            <li><a href="#work" data-img="assets/images/jump.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/corridor.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/sofa.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/portrait.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/window.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/stairs.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/plastic.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/liquid.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/plus-blur.webp">Client name</a></li>
+            <li><a href="#work" data-img="assets/images/glow.webp">Client name</a></li>
+          </ul>
+        </div>
+        <div class="relative col-span-4 aspect-[4/3] overflow-hidden md:col-span-7 md:-mr-[var(--kit-pad)] md:aspect-auto md:h-[100vh] md:self-stretch" data-clients-stage>
+          <img src="assets/images/jump.webp" alt="" class="kit-client-img is-active" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES TABLE ===================== -->
+    <section id="services" class="pb-24 pt-28 md:pb-32 md:pt-44" aria-labelledby="services-title">
+      <div class="kit-grid mb-8 md:mb-10">
+        <h2 id="services-title" class="col-span-4 font-display text-[clamp(3rem,6.4vw,7rem)] font-light uppercase leading-[0.9] tracking-[-0.035em] md:col-span-6 md:col-start-7" data-split>Services</h2>
+      </div>
+      <table class="kit-table w-full text-left uppercase">
+        <caption class="sr-only">Up+Above services by stage</caption>
+        <thead class="sr-only"><tr><th scope="col">Service</th><th scope="col">Stage</th><th scope="col">Pillar</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Brand Audit</th><td>Dissect</td><td>01</td></tr>
+          <tr><th scope="row">Brand Communication Strategy</th><td>Dissect</td><td>01</td></tr>
+          <tr><th scope="row">Corporate Branding Strategy</th><td>Dissect</td><td>01</td></tr>
+          <tr><th scope="row">Personal Branding</th><td>Dissect</td><td>01</td></tr>
+          <tr><th scope="row">Integrated Marketing Plan</th><td>Dissect</td><td>01</td></tr>
+          <tr><th scope="row">Campaign Strategy &amp; Orchestration</th><td>Anchor</td><td>02</td></tr>
+          <tr><th scope="row">Activations &amp; Events</th><td>Anchor</td><td>02</td></tr>
+          <tr><th scope="row">Social Media &amp; Content</th><td>Anchor</td><td>02</td></tr>
+          <tr><th scope="row">Visual Identity &amp; Design</th><td>Orchestrate</td><td>03</td></tr>
+          <tr><th scope="row">Creative Design Solution</th><td>Orchestrate</td><td>03</td></tr>
+          <tr><th scope="row">Digital &amp; Media</th><td>Orchestrate</td><td>03</td></tr>
+          <tr><th scope="row">Merchandise</th><td>Orchestrate</td><td>03</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER (lime wordmark panel) ===================== -->
+  <footer id="contact" class="overflow-hidden bg-lime text-bg" data-nav-light>
+    <div class="kit-grid gap-y-8 pb-12 pt-16 text-label uppercase md:pt-20">
+      <div class="col-span-4 md:col-span-4">
+        <p class="mb-3 opacity-60">New business</p>
+        <a href="mailto:cindy.anggraeni@upandabove.id" class="link-draw font-display text-h3 font-bold normal-case tracking-[-0.02em]">cindy.anggraeni@upandabove.id</a>
+      </div>
+      <div class="col-span-2 md:col-span-2 md:col-start-7">
+        <p class="mb-3 opacity-60">Talk</p>
+        <a href="https://wa.me/62811817750" class="link-draw" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="col-span-2 md:col-span-2">
+        <p class="mb-3 opacity-60">Follow</p>
+        <!-- Social URLs to be supplied. -->
+        <ul class="space-y-1"><li><a href="#" class="link-draw">Instagram</a></li><li><a href="#" class="link-draw">LinkedIn</a></li></ul>
+      </div>
+      <div class="col-span-4 md:col-span-2 md:col-start-11 md:text-right">
+        <p class="mb-3 opacity-60">© 2026 Up+Above</p>
+        <ul class="space-y-1"><li><a href="#" class="link-draw">Terms &amp; Conditions</a></li><li><a href="#" class="link-draw">Privacy Policy</a></li></ul>
+      </div>
+    </div>
+    <div class="px-[var(--kit-pad)] pb-[1.2vw]">
+      <p class="kit-mark inline-block whitespace-nowrap font-display leading-[0.78]" data-fit aria-hidden="true">
+        <span class="kit-mask"><span class="font-extrabold tracking-[-0.06em]">Up+</span></span><span class="kit-mask"><span class="font-extralight tracking-[-0.045em]">Above.</span></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="dist/kit.js"></script>
+</body>
+</html>
