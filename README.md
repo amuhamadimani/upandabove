@@ -7,8 +7,6 @@ Static site: plain HTML pages with Tailwind CSS, GSAP and Lenis (built into `dis
 - `index.html` — home
 - `work.html` — all work
 - `work-detail.html` — project page (preview)
-- `kit-style.html`, `ortolan-style.html`, `nothin-style.html` — earlier layout explorations
-- `archive/` — backups of earlier versions
 
 ## Develop
 
