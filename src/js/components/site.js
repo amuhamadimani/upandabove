@@ -1,6 +1,6 @@
 // Behaviour shared by every page: anchor scrolling, the "+" pointer and the
 // "View detail" cursor over work images.
-import { gsap, lenis, reduce, EASE_IN_OUT } from '../lib/motion.js';
+import { gsap, lenis, reduce, EASE_IN_OUT, EASE_OUT } from '../lib/motion.js';
 
 const HEADER = 40;
 
@@ -83,7 +83,7 @@ export function initPointer() {
     const under = document.elementFromPoint(x, y);
     el.classList.toggle('is-dark', !!under?.closest('[data-nav-light]'));
     const pill = !!under?.closest('.home-work-img');
-    const link = !pill && !!under?.closest('a, button, [data-svc-trigger], [data-svc-panel] li, [data-opt-block] li');
+    const link = !pill && !!under?.closest('a, button, [data-svc-trigger], [data-svc-panel] li');
     gsap.to(el, { opacity: pill ? 0 : 1, duration: 0.2, overwrite: 'auto' });
     if (link !== big) {
       big = link;

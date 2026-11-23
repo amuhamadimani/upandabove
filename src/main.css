@@ -38,11 +38,12 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 .home {
   --px: calc(100vw / 1440);
   /* Type standard: two families only, sentence case, never italic.
-     Titles (statement, h2, service and work names, footer heading): Bricolage Grotesque.
-     Everything else (nav, lists, descriptions, links, labels): Inter. */
-  --font-title: "Bricolage Grotesque", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --title-weight: 700; /* every title shares this weight */
+     Regular text and titles: Inter Tight (Medium for titles). Highlight words inside a
+     title (.hl): Bricolage Grotesque Bold. */
+  --font-title: "Inter Tight", sans-serif;                 /* regular text and titles: Inter Tight Medium */
+  --font-display: "Bricolage Grotesque", sans-serif;       /* highlight words (.hl) */
+  --font-body: "Inter Tight", sans-serif;
+  --title-weight: 500; /* every title shares this weight */
 
   /* ---- Spacing: a 4px grid. Gaps, padding and margins use multiples of 4 only. ---- */
   --space-section: clamp(80px, round(down, 9.792vw, 4px), 144px); /* top and bottom of a section */
@@ -65,16 +66,18 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   --fs-link: max(28px, round(down, calc(40 * var(--px)), 4px));      /* footer links */
   --lh-link: round(calc(var(--fs-link) * 1.1), 4px);
   --fs-opt: max(28px, round(down, calc(48 * var(--px)), 4px));       /* services option B titles */
-  --lh-opt: round(calc(var(--fs-opt) * 1.1), 4px);
+  --lh-opt: round(calc(var(--fs-opt) * 1), 4px);
   --fs-svc: max(28px, round(down, calc(56 * var(--px)), 4px));       /* services titles */
-  --lh-svc: round(calc(var(--fs-svc) * 1.1), 4px);
+  --lh-svc: round(calc(var(--fs-svc) * 1), 4px);
   --fs-detail: max(36px, round(down, calc(56 * var(--px)), 4px));    /* project page title */
   --lh-detail: round(calc(var(--fs-detail) * 1.1), 4px);
-  --fs-statement: max(28px, round(down, calc(64 * var(--px)), 4px)); /* About statement */
+  --fs-step: max(20px, round(down, calc(32 * var(--px)), 4px));      /* framework steps */
+  --lh-step: round(calc(var(--fs-step) * 1.1), 4px);
+  --fs-statement: max(28px, round(down, calc(56 * var(--px)), 4px)); /* About statement */
   --lh-statement: round(calc(var(--fs-statement) * 1.1), 4px);
-  --fs-footer: max(36px, round(down, calc(64 * var(--px)), 4px));    /* footer heading */
+  --fs-footer: max(36px, round(down, calc(56 * var(--px)), 4px));    /* footer heading */
   --lh-footer: round(calc(var(--fs-footer) * 1.1), 4px);
-  --fs-h2: max(36px, round(down, calc(80 * var(--px)), 4px));        /* section headings */
+  --fs-h2: max(36px, round(down, calc(56 * var(--px)), 4px));        /* section headings */
   --lh-h2: round(calc(var(--fs-h2) * 1.1), 4px);
   --fs-menu: 32px;                                                   /* phone menu links */
   --lh-menu: 40px;
@@ -99,6 +102,11 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   letter-spacing: -0.02em;
   font-variation-settings: "opsz" 14;
 }
+/* Menu links change colour on hover (content brief). */
+.home-header nav a { transition: color 0.3s var(--ease-out); }
+.home-header nav a:hover, .home-header nav a:focus-visible { color: #C8FF00; }
+/* Highlight words inside a title: Bricolage Grotesque Bold among Inter Tight Medium. */
+.home .hl { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; }
 .home-pill {
   display: inline-block;
   width: 1.9em;
@@ -109,7 +117,7 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   object-fit: cover;
 }
 .home-h2 {
-  font-weight: 700;
+  font-weight: var(--title-weight);
   font-variation-settings: "opsz" 14;
   font-size: var(--fs-h2);
   line-height: var(--lh-h2);
@@ -129,13 +137,11 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   padding-block: 8px; /* keeps the touch target 44px or taller */
   color: rgba(0, 0, 0, 0.5);
 }
-.home-svc.is-open .home-svc-title { font-weight: 700; color: #000; }
+.home-svc.is-open .home-svc-title { color: #000; }
 
 /* Service titles: a plain fade. Faded when idle, full black on hover and when open. */
-.home-svc-title, .home-opt-title { transition: color 0.4s ease; }
-.home-svc-title:hover, .home-svc-title:focus-visible,
-.home-opt-title:hover, .home-opt-title:focus-visible,
-.home-opt-item.is-active .home-opt-title { color: #000; }
+.home-svc-title { transition: color 0.4s ease; }
+.home-svc-title:hover, .home-svc-title:focus-visible { color: #000; }
 
 .home-svc-panel { height: 0; overflow: hidden; }
 .home-svc.is-open > .home-svc-panel { height: auto; }
@@ -149,14 +155,15 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   letter-spacing: -0.01em;
 }
 .home-svc-panel li { transition: transform 0.5s var(--ease-out), opacity 0.4s var(--ease-out); }
-.home-svc-panel li img { transition: transform 0.5s var(--ease-out); }
+/* Sub-service marker: a slash, as in the content brief. */
+.home-svc-panel li::before { content: "/"; flex: none; width: 16px; font-weight: 500; }
 .home-svc-panel:hover li { opacity: 0.45; }
 .home-svc-panel li:hover { opacity: 1; transform: translateX(8px); }
-.home-svc-panel li:hover img { transform: rotate(90deg); }
 .home-svc-panel li + li { margin-top: 12px; }
 .home-svc-panel li:first-child { margin-top: 16px; }
 
 .home-work { display: flex; flex-direction: column; gap: 16px; }
+@media (min-width: 640px) { .home-work--wide .home-work-img { aspect-ratio: 2.06 / 1; } }
 .home-work-img {
   position: relative;
   display: block;
@@ -176,10 +183,10 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   left: -36.692%; top: -0.217%;
   width: 173.426%; height: 100.433%;
 }
-.home-work-meta { display: flex; flex-direction: column; gap: 12px; padding-top: 12px; color: #f2f2ec; }
+.home-work-meta { display: flex; flex-direction: column; gap: 4px; padding-top: 12px; color: #f2f2ec; }
 .home-work-title {
   font-variation-settings: "opsz" 14;
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--fs-name);
   line-height: var(--lh-name);
   letter-spacing: -0.02em;
@@ -254,6 +261,7 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
   font-size: var(--fs-footer);
   line-height: var(--lh-footer);
   letter-spacing: -0.02em;
+  text-wrap: balance;
   font-variation-settings: "opsz" 14;
 }
 
@@ -291,39 +299,8 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 
 /* One weight for every title: statement, h2s, service and work names, footer heading and footer links. */
 .home .home-statement, .home .home-h2, .home .home-svc-title, .home .home-work-title,
-.home .home-footer-h, .home .home-contact-links a, .home .home-opt-title { font-weight: var(--title-weight); }
-
-/* ---- Services option B ---- */
-.home-opt-label { font-size: var(--fs-small); line-height: var(--lh-small); letter-spacing: -0.01em; color: #1a1a1a; }
-.home-opt-title {
-  display: block;
-  width: 100%;
-  text-align: left;
-  font-family: var(--font-title);
-  font-variation-settings: "opsz" 14;
-  font-size: var(--fs-opt);
-  line-height: var(--lh-opt);
-  letter-spacing: -0.02em;
-  padding-block: 8px;
-  color: rgba(0, 0, 0, 0.4);
-}
-.home-opt-plus { height: 0; overflow: hidden; }
-.home-opt-item.is-active > .home-opt-plus { height: auto; }
-.home-opt-plus > div { display: flex; flex-direction: column; gap: 8px; padding-top: 24px; }
-.home-opt-plus img { display: block; width: min(100%, 432px); height: auto; }
-.home-opt-block { display: none; }
-.home-opt-block.is-on { display: block; }
-.home-opt-list { margin-top: 16px; }
-.home-opt-list li {
-  font-size: var(--fs-body);
-  line-height: var(--lh-body);
-  letter-spacing: -0.01em;
-  font-weight: 500;
-  opacity: 0.4;
-  transition: opacity 0.4s var(--ease-out);
-}
-.home-opt-list li + li { margin-top: 8px; }
-.home-opt-list li.is-active { opacity: 1; }
+.home .home-footer-h, .home .home-contact-links a { font-weight: var(--title-weight); }
+.home .home-statement .hl, .home .cmp-name .hl, .home .fw-cap .hl, .home .home-h2 .hl, .home .home-svc-title .hl, .home .home-footer-h .hl, .home .detail-title .hl { font-weight: 700; }
 
 /* Work page lede: one large Inter sentence under the title. */
 .work-lede {
@@ -423,10 +400,117 @@ html.is-leaving, html.is-leaving * { cursor: progress !important; }
 .home-menu-social { display: flex; align-items: baseline; gap: 0.3em; padding: 8px 0; font-size: 20px; font-weight: 500; line-height: 28px; letter-spacing: -0.01em; }
 @media (min-width: 768px) { .home-menu { display: none; } }
 
+/* ---- Framework: Dissect, Anchor, Orchestrate, one seamless flow ----
+   Phone: stages stack with a short line between them. Desktop: three columns with a
+   line running through three nodes; it draws lime when the flow scrolls into view. */
+.fw-flow { display: grid; gap: 0; }
+@media (min-width: 768px) { .fw-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.fw-stage { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.fw-cap { font-size: var(--fs-small); line-height: var(--lh-small); letter-spacing: -0.01em; color: var(--muted); }
+.fw-cap .hl { color: #f2f2ec; }
+.fw-body { display: grid; place-items: center start; width: 100%; min-height: max(120px, round(down, calc(220 * var(--px)), 4px)); margin-top: 24px; }
+.fw-steps { display: flex; align-items: center; justify-content: flex-start; gap: 12px; }
+.fw-steps p {
+  font-family: var(--font-title); font-weight: var(--title-weight);
+  font-size: var(--fs-step); line-height: var(--lh-step); letter-spacing: -0.02em;
+}
+.fw-go { display: grid; flex: none; width: 32px; height: 32px; }
+.fw-go svg { width: 100%; height: 100%; fill: #C8FF00; transition: transform 0.5s var(--ease-out); }
+.fw-plus { display: grid; place-items: center start; color: #C8FF00; }
+.fw-plus svg { width: max(80px, round(down, calc(128 * var(--px)), 4px)); height: auto; fill: currentColor; transition: transform 0.9s var(--ease-out); }
+
+/* Node: a lime dot, the pillar name, and the line to the next node. */
+.fw-node { position: relative; display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin-top: 24px; }
+.fw-dot { width: 12px; height: 12px; border-radius: 50%; background: #C8FF00; transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.fw-name { margin-top: 16px; font-size: var(--fs-small); line-height: var(--lh-small); letter-spacing: -0.01em; color: #C8FF00; }
+.fw-stage:not(:last-child)::after { content: ""; width: 1px; height: 48px; margin: 24px 0 24px 6px; background: var(--line); }
+
+@media (min-width: 768px) {
+  .fw-stage:not(:last-child)::after { display: none; }
+  .fw-node::before, .fw-node::after { content: ""; position: absolute; top: 5px; left: 0; width: 100%; height: 1px; }
+  .fw-node::after { background: var(--line); }
+  /* The line only runs between the dots: it starts at the first dot and ends at the last. */
+  .fw-stage:first-child .fw-node::before, .fw-stage:first-child .fw-node::after { left: 50%; width: 50%; }
+  .fw-stage:last-child .fw-node::before, .fw-stage:last-child .fw-node::after { width: 50%; }
+  .fw-node::before { z-index: 1; background: #C8FF00; transform-origin: left; transform: scaleX(0); transition: transform 0.8s var(--ease-out); }
+  /* Every stage is centred on its own column axis: caption, circle arrow / plus, dot and name share one
+     centre line, and the track runs edge to edge through the three dots. */
+  .fw-stage { align-items: center; text-align: center; }
+  .fw-body { place-items: center; margin-top: 32px; min-height: max(120px, round(down, calc(176 * var(--px)), 4px)); }
+  .fw-steps { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); width: 100%; column-gap: max(16px, round(down, calc(24 * var(--px)), 4px)); }
+  .fw-steps p:first-child { text-align: right; }
+  .fw-steps p:last-child { text-align: left; }
+  .fw-plus { place-items: center; width: 100%; }
+  .fw-node { align-items: center; margin-top: 32px; }
+}
+
+/* Entrance: stages rise in one after another, then the line draws and the dots pop. */
+.js .fw-cap, .js .fw-body, .js .fw-name { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+.js .fw-dot { transform: scale(0); }
+.js .fw-plus svg { transform: rotate(-90deg) scale(0.6); }
+.fw-flow.is-in .fw-cap, .fw-flow.is-in .fw-body, .fw-flow.is-in .fw-name { opacity: 1; transform: none; }
+.fw-flow.is-in .fw-dot { transform: scale(1); }
+.fw-flow.is-in .fw-plus svg { transform: none; }
+.fw-flow.is-in .fw-node::before { transform: scaleX(1); }
+.fw-stage:nth-child(2) .fw-cap, .fw-stage:nth-child(2) .fw-body { transition-delay: 0.3s; }
+.fw-stage:nth-child(3) .fw-cap, .fw-stage:nth-child(3) .fw-body { transition-delay: 0.6s; }
+.fw-stage:nth-child(1) .fw-dot, .fw-stage:nth-child(1) .fw-name { transition-delay: 0.3s; }
+.fw-stage:nth-child(2) .fw-dot, .fw-stage:nth-child(2) .fw-name { transition-delay: 0.9s; }
+.fw-stage:nth-child(3) .fw-dot, .fw-stage:nth-child(3) .fw-name { transition-delay: 1.5s; }
+.fw-stage:nth-child(1) .fw-node::before { transition-delay: 0.5s; }
+.fw-stage:nth-child(2) .fw-node::before { transition-delay: 1.1s; }
+.fw-stage:nth-child(3) .fw-node::before { transition-delay: 1.7s; }
+
+/* Once the entrance has played, hover reacts quickly. */
+.fw-flow.is-done .fw-cap, .fw-flow.is-done .fw-body, .fw-flow.is-done .fw-name { transition-duration: 0.4s; transition-delay: 0s; }
+.fw-flow.is-done .fw-dot { transition-delay: 0s; }
+
+/* Pointer: the words of the stage under the pointer come forward and the others step back.
+   The line and the dots never fade, so the flow stays one continuous line. */
+@media (hover: hover) {
+  .fw-flow:hover .fw-cap, .fw-flow:hover .fw-body, .fw-flow:hover .fw-name { opacity: 0.4; }
+  .fw-flow .fw-stage:hover .fw-cap, .fw-flow .fw-stage:hover .fw-body, .fw-flow .fw-stage:hover .fw-name { opacity: 1; }
+  .fw-stage:hover .fw-go svg { transform: translateX(4px); }
+  .fw-stage:hover .fw-plus svg { transform: rotate(90deg) scale(1.1); }
+  .fw-stage:hover .fw-dot { transform: scale(1.5); }
+}
+
+/* ---- Compound: U+A Roster and Up Market ---- */
+.cmp-row { position: relative; display: grid; gap: 24px; padding: 48px 0; border-top: 1px solid var(--line); }
+.cmp-row:last-child { border-bottom: 1px solid var(--line); }
+@media (min-width: 768px) {
+  .cmp-row { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 0 24px; padding: 64px 0; }
+  .cmp-row--flip .cmp-name { order: 2; }
+}
+.cmp-name, .cmp-copy { position: relative; z-index: 1; }
+.cmp-name { font-size: var(--fs-statement); line-height: var(--lh-statement); letter-spacing: -0.02em; color: #fff; }
+.home .cmp-name { font-family: var(--font-title); font-weight: var(--title-weight); }
+.cmp-plus { margin-left: 4px; color: #C8FF00; font-size: 0.5em; vertical-align: super; }
+.cmp-desc, .cmp-tag { font-size: var(--fs-name); line-height: var(--lh-name); letter-spacing: -0.02em; }
+.home .cmp-desc, .home .cmp-tag { font-family: var(--font-title); font-weight: var(--title-weight); }
+.cmp-desc { color: #f2f2ec; }
+.cmp-tag { margin-top: 16px; color: #C8FF00; transition: transform 0.6s var(--ease-out); }
+.cmp-row:hover .cmp-tag { transform: translateX(8px); }
+
+/* Dashed curves drifting behind each sub-service; they run faster and turn lime on hover. */
+.cmp-line { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.cmp-line path {
+  fill: none; stroke: rgba(242, 242, 236, 0.45); stroke-width: 1; vector-effect: non-scaling-stroke;
+  stroke-dasharray: 4 10;
+  animation: cmp-dash 18s linear infinite;
+  transition: stroke 0.5s var(--ease-out);
+}
+.cmp-row:hover .cmp-line path { stroke: #C8FF00; animation-duration: 5s; }
+@keyframes cmp-dash { to { stroke-dashoffset: -280; } }
+
 @media (prefers-reduced-motion: reduce) {
   .js [data-split], .js [data-reveal] { visibility: visible; opacity: 1; transform: none; }
   .js .home-mask > img { visibility: visible; }
-  .home-svc-title, .home-opt-title { transition: none; }
+  .home-svc-title { transition: none; }
+  .js .fw-cap, .js .fw-body, .js .fw-name { opacity: 1; transform: none; transition: none; }
+  .js .fw-dot, .js .fw-plus svg, .fw-node::before { transform: none; transition: none; }
+  .cmp-line path { animation: none; }
+  .cmp-tag { transition: none; }
   .page-curtain svg { animation: none; }
   .home-clients { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
   .home-clients-track { animation: none; }

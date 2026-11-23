@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>document.documentElement.classList.add('js');</script>
   <script>try{var d=document.documentElement;if(sessionStorage.getItem('page-transition')){sessionStorage.removeItem('page-transition');d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}</script>
-  <title>Work — Up+Above</title>
-  <meta name="description" content="Selected work from Up+Above: brand identities, campaigns and creative for ambitious brands.">
+  <title>All works — Up+Above</title>
+  <meta name="description" content="Case highlights from Up+Above: brand strategy, events and out-of-home campaigns for IFFINA+ 2025, Butter Baby and Labinak.">
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta property="og:title" content="Work — Up+Above">
-  <meta property="og:description" content="Selected work from Up+Above.">
+  <meta property="og:title" content="All works — Up+Above">
+  <meta property="og:description" content="Case highlights from Up+Above.">
   <meta property="og:image" content="assets/figma/banner.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/tailwind.css">
 </head>
 <!-- Work page: a title, one sentence and a grid of projects. Same header, footer and type as index.html. -->
@@ -28,10 +28,10 @@
   <header class="home-header fixed inset-x-0 top-0 z-50 flex h-10 items-center bg-black px-6" data-header>
     <a href="index.html" class="home-brand md:hidden" aria-label="Up+Above, home"><img src="assets/figma/logo-hero.svg" width="1392" height="246" alt="" class="block h-4 w-auto"></a>
     <nav class="flex flex-1 items-center gap-6 t-micro font-medium text-white max-md:hidden" aria-label="Main">
-      <a href="index.html#about" class="link-draw hit">About</a>
+      <a href="index.html#about" class="link-draw hit">About <span class="text-lime">+</span> us</a>
       <a href="index.html#services" class="link-draw hit">Services</a>
-      <a href="work.html" class="link-draw hit" aria-current="page">Works</a>
-      <a href="index.html#clients" class="link-draw hit">Clients</a>
+      <a href="work.html" class="link-draw hit" aria-current="page">Works<span class="text-lime">+</span></a>
+      <a href="index.html#clients" class="link-draw hit">Seen &amp; Trust</a>
     </nav>
     <a href="#contact" class="home-talk link-draw hit flex items-center gap-1 t-micro font-medium text-lime max-md:hidden">
       Let’s talk <img src="assets/figma/arrow.svg" width="16" height="11" alt="">
@@ -42,10 +42,10 @@
   <!-- Phone menu: a card that drops from under the header (opened by the hamburger). -->
   <div id="home-menu" class="home-menu md:hidden" data-menu aria-hidden="true">
     <nav class="home-menu-panel" aria-label="Menu">
-      <a href="index.html#about" class="home-menu-link" data-menu-link>About</a>
+      <a href="index.html#about" class="home-menu-link" data-menu-link>About + us</a>
       <a href="index.html#services" class="home-menu-link" data-menu-link>Services</a>
-      <a href="work.html" class="home-menu-link" aria-current="page" data-menu-link>Works</a>
-      <a href="index.html#clients" class="home-menu-link" data-menu-link>Clients</a>
+      <a href="work.html" class="home-menu-link" aria-current="page" data-menu-link>Works+</a>
+      <a href="index.html#clients" class="home-menu-link" data-menu-link>Seen &amp; Trust</a>
       <div class="home-menu-foot" data-menu-link>
         <a href="#contact" class="home-menu-cta">Let’s talk <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
         <p class="home-menu-label">Social</p>
@@ -57,66 +57,38 @@
 
   <main id="main" class="flex flex-col gap-10 pt-16">
     <section class="flex flex-col gap-10 px-6 pb-4 pt-[clamp(48px,round(down,6vw,4px),96px)]">
-      <h1 class="home-h2" data-split>Our work</h1>
-      <p class="work-lede max-w-[34ch]" data-reveal>We partner with ambitious brands, businesses and people to deliver design, campaigns and digital that drive results and lift every brand experience.</p>
+      <h1 class="home-h2" data-split>All <span class="hl">works</span><span class="text-lime">+</span></h1>
+      <p class="work-lede max-w-[34ch]" data-reveal>We are an uprising consulting agency that upscales brands by connecting <span class="text-lime">+</span> brand value with purposeful communication solutions.</p>
     </section>
 
     <section class="px-6 pb-[var(--space-section)]" aria-label="Projects">
       <div class="grid gap-x-6 gap-y-12 sm:grid-cols-2">
         <a href="work-detail.html" class="home-work group">
-          <span class="home-work-img"><img src="assets/figma/work-henri.webp" alt="Henri &amp; Hélène menu on a clipboard with branded coasters" loading="lazy"></span>
+          <span class="home-work-img"><img src="assets/figma/work-mind.webp" width="1600" height="841" alt="IFFINA+ 2025" loading="lazy"></span>
           <span class="home-work-meta">
-            <span class="home-work-title">Henri &amp; Hélène</span>
-            <span class="home-work-desc">A neighborhood French bistro</span>
+            <span class="home-work-title">IFFINA+ 2025</span>
+            <span class="home-work-desc">Mahala · Brand strategy &amp; positioning, brand identity, event concept</span>
           </span>
         </a>
         <a href="work-detail.html" class="home-work group">
-          <span class="home-work-img"><img src="assets/figma/work-kimball.webp" alt="Kimball Modern shopping bag on a leather chair" loading="lazy"></span>
+          <span class="home-work-img"><img src="assets/figma/work-kimball.webp" width="1600" height="2344" alt="Butter Baby" loading="lazy"></span>
           <span class="home-work-meta">
-            <span class="home-work-title">Kimball Modern</span>
-            <span class="home-work-desc">An interior design firm exploring the interplay of light and texture</span>
+            <span class="home-work-title">Butter Baby</span>
+            <span class="home-work-desc">Butter Baby Indonesia · Brand experience, event production, event operations</span>
           </span>
         </a>
         <a href="work-detail.html" class="home-work group">
-          <span class="home-work-img"><img src="assets/figma/work-mind.webp" alt="The Mind Company posters on a concrete wall" loading="lazy"></span>
+          <span class="home-work-img"><img src="assets/figma/banner.webp" width="1600" height="558" alt="Labinak" loading="lazy"></span>
           <span class="home-work-meta">
-            <span class="home-work-title">The Mind Company</span>
-            <span class="home-work-desc">A destination for mental fitness made just for your mind</span>
+            <span class="home-work-title">Labinak</span>
+            <span class="home-work-desc">Anami Films · Brand experience, creative design solution, out-of-home</span>
           </span>
         </a>
         <a href="work-detail.html" class="home-work group">
-          <span class="home-work-img"><img src="assets/figma/thumb-banner.webp" alt="Spero Ventures billboard on a brick wall" loading="lazy"></span>
+          <span class="home-work-img"><img src="assets/figma/work-henri.webp" width="1600" height="2400" alt="Project 4" loading="lazy"></span>
           <span class="home-work-meta">
-            <span class="home-work-title">Spero Ventures</span>
-            <span class="home-work-desc">A venture firm for the purposeful</span>
-          </span>
-        </a>
-        <a href="work-detail.html" class="home-work group">
-          <span class="home-work-img"><img src="assets/images/stairs.webp" alt="Northwind brand imagery" loading="lazy"></span>
-          <span class="home-work-meta">
-            <span class="home-work-title">Northwind</span>
-            <span class="home-work-desc">A travel studio mapping slower journeys</span>
-          </span>
-        </a>
-        <a href="work-detail.html" class="home-work group">
-          <span class="home-work-img"><img src="assets/images/window.webp" alt="Lumen brand imagery" loading="lazy"></span>
-          <span class="home-work-meta">
-            <span class="home-work-title">Lumen</span>
-            <span class="home-work-desc">A lighting brand shaping calm spaces</span>
-          </span>
-        </a>
-        <a href="work-detail.html" class="home-work group">
-          <span class="home-work-img"><img src="assets/images/liquid.webp" alt="Orbit Labs brand imagery" loading="lazy"></span>
-          <span class="home-work-meta">
-            <span class="home-work-title">Orbit Labs</span>
-            <span class="home-work-desc">A research lab turning data into stories</span>
-          </span>
-        </a>
-        <a href="work-detail.html" class="home-work group">
-          <span class="home-work-img"><img src="assets/images/sofa.webp" alt="Verdant brand imagery" loading="lazy"></span>
-          <span class="home-work-meta">
-            <span class="home-work-title">Verdant</span>
-            <span class="home-work-desc">A plant-based kitchen for everyday meals</span>
+            <span class="home-work-title">Project 4</span>
+            <span class="home-work-desc">Client name · Scope to be added</span>
           </span>
         </a>
       </div>
@@ -126,7 +98,7 @@
   <!-- Footer (108:193) -->
   <footer id="contact" class="bg-lime text-[#0b0b0a]" data-nav-light>
     <div class="grid gap-y-12 px-6 pt-[clamp(72px,round(down,7.778vw,4px),112px)] md:grid-cols-[1fr_42.38%] md:grid-rows-[minmax(calc(196.94*var(--px)),auto)] md:gap-x-6">
-      <h2 class="home-footer-h font-display font-light" data-split>Bring us the brief.<br class="md:hidden"> We’ll<br class="max-md:hidden"> take it above.</h2>
+      <h2 class="home-footer-h" data-split>Let’s make your brand <span class="hl">rise up</span> and go <span class="hl">above and beyond</span>.</h2>
       <div class="home-contact">
         <div>
           <p class="home-contact-label">Social</p>
@@ -143,13 +115,12 @@
         </div>
       </div>
     </div>
-    </div>
 
     <div class="grid px-6 pt-[clamp(64px,round(down,10vw,4px),144px)] md:grid-cols-[1fr_42.38%] md:gap-x-6">
       <p class="flex flex-wrap gap-6 t-micro md:col-start-2">
         <span>© Up+Above 2026.</span>
-        <a href="#" class="link-draw hit">Terms &amp; conditions</a>
         <a href="#" class="link-draw hit">Privacy policy</a>
+        <a href="#" class="link-draw hit">Terms &amp; conditions</a>
         <span>Designed byParvis</span>
       </p>
     </div>

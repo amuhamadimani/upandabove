@@ -200,90 +200,19 @@ function initServices() {
   });
 }
 
-// Services, option B: titles in the middle, the picked service's list on the
-// right, one picture parked bottom left. Hovering a title or a list item only
-// changes the picture; clicking a title swaps the list and opens its "+" row.
-function initOptions() {
-  const root = document.querySelector('[data-opt]');
-  if (!root) return;
-  const items = Array.from(root.querySelectorAll('[data-opt-item]'));
-  const blocks = Array.from(root.querySelectorAll('[data-opt-block]'));
-  const swap = makeSwapper(root.querySelector('.home-opt-img'));
-  swap.preload(root);
-
-  const selected = () => items.find((item) => item.classList.contains('is-active'));
-
-  // The right-hand list sits level with the selected title, and slides with it
-  // while the "+" rows above open and close.
-  const right = root.querySelector('[data-opt-right]');
-  const desktop = window.matchMedia('(min-width: 768px)');
-  const follow = reduce ? null : gsap.quickTo(right, 'y', { duration: 0.8, ease: 'power3.out' });
-  let tracking = 0;
-  const aim = (instant) => {
-    if (!desktop.matches) { gsap.set(right, { y: 0 }); return; }
-    const item = selected();
-    if (!item) return;
-    const y = Number(gsap.getProperty(right, 'y')) || 0;
-    const base = right.getBoundingClientRect().top - y;
-    const target = item.getBoundingClientRect().top - base;
-    if (instant || !follow) gsap.set(right, { y: target });
-    else follow(target);
-  };
-  gsap.ticker.add(() => { if (performance.now() < tracking) aim(); });
-  window.addEventListener('resize', () => aim(true));
-  document.fonts.ready.then(() => aim(true));
-  aim(true);
-  const activeBlock = () => blocks.find((block) => block.classList.contains('is-on'));
-  const mark = (li) => {
-    li.parentElement.querySelectorAll('li').forEach((other) => other.classList.toggle('is-active', other === li));
-  };
-  const resetList = () => {
-    const first = activeBlock()?.querySelector('li');
-    if (first) mark(first);
-  };
-
-  const select = (item) => {
-    if (item.classList.contains('is-active')) return;
-    items.forEach((other) => {
-      const on = other === item;
-      other.classList.toggle('is-active', on);
-      other.querySelector('[data-opt-trigger]').setAttribute('aria-expanded', String(on));
-      gsap.to(other.querySelector('.home-opt-plus'), {
-        height: on ? 'auto' : 0,
-        duration: reduce ? 0 : 0.7,
-        ease: 'power4.inOut',
-        onComplete: () => ScrollTrigger.refresh(),
-      });
-    });
-    blocks.forEach((block) => block.classList.toggle('is-on', block.dataset.optBlock === item.dataset.panel));
-    tracking = performance.now() + 1200;
-    const block = activeBlock();
-    mark(block.querySelector('li'));
-    if (!reduce) {
-      gsap.from(block.querySelectorAll('.home-opt-label, li'), { y: 14, opacity: 0, duration: 0.6, stagger: 0.05, ease: EASE_OUT, clearProps: 'transform,opacity' });
-    }
-  };
-
-  items.forEach((item) => {
-    const trigger = item.querySelector('[data-opt-trigger]');
-    trigger.addEventListener('mouseenter', () => swap.show(item.dataset.img));
-    trigger.addEventListener('focus', () => swap.show(item.dataset.img));
-    trigger.addEventListener('click', () => { select(item); swap.show(item.dataset.img); });
-  });
-  root.querySelectorAll('[data-opt-block] li').forEach((li) => {
-    li.addEventListener('mouseenter', () => { mark(li); swap.show(li.dataset.img); });
-  });
-
-  // Leaving the lists returns the picture to the picked service.
-  // (The zone is display: contents on desktop, so its two columns listen.)
-  const columns = Array.from(root.querySelector('[data-opt-zone]').children);
-  columns.forEach((column) => {
-    column.addEventListener('mouseleave', (e) => {
-      if (e.relatedTarget instanceof Node && columns.some((other) => other.contains(e.relatedTarget))) return;
-      resetList();
-      const item = selected();
-      if (item) swap.show(item.dataset.img);
-    });
+// Framework: the flow plays once, when it scrolls into view.
+function initFramework() {
+  const flow = document.querySelector('[data-framework]');
+  if (!flow) return;
+  if (reduce) { flow.classList.add('is-in', 'is-done'); return; }
+  ScrollTrigger.create({
+    trigger: flow,
+    start: 'top 80%',
+    once: true,
+    onEnter: () => {
+      flow.classList.add('is-in');
+      setTimeout(() => flow.classList.add('is-done'), 2600);
+    },
   });
 }
 
@@ -304,7 +233,7 @@ initAnchors();
 initTransitions();
 initMenu();
 initServices();
-initOptions();
+initFramework();
 initPointer();
 initWorkCursor();
 initBrand();
