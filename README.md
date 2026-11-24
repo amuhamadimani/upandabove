@@ -23,8 +23,9 @@ npm run build    # CSS, JS and the finished site in _site/
 
 `dist/` is committed, and the pages at the root still open directly with the current content.
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare)
 
-- Framework preset: None
+Cloudflare builds every push to `main`, and `wrangler.jsonc` says to serve `_site`.
+
 - Build command: `npm run build`
-- Build output directory: `_site`
+- Deploy command: `npx wrangler deploy`
