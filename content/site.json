@@ -1,26 +1,61 @@
 {
   "works": [
     {
-      "title": "*IFFINA+* 2025",
+      "title": "TESTSTSTEE",
       "slug": "iffina-plus-2025",
       "client": "Mahala",
       "year": "2025",
       "info": "Strengthened the IFFINA+ brand narrative with “Story of Origin”, unlocking untapped potential and expanding audience scope.",
-      "scope": ["Brand Strategy & Positioning", "Brand Identity", "Event Concept", "Marketing Comms Strategy & Planning"],
+      "scope": [
+        "Brand Strategy & Positioning",
+        "Brand Identity",
+        "Event Concept",
+        "Marketing Comms Strategy & Planning"
+      ],
       "result": "15,000+ visitors",
       "cover": "assets/figma/work-mind.webp",
       "featured": true,
       "gallery": [
-        { "image": "assets/figma/work-henri.webp", "width": "Wide" },
-        { "image": "assets/images/sofa.webp", "width": "Narrow" },
-        { "image": "assets/images/portrait.webp", "width": "Narrow" },
-        { "image": "assets/images/stairs.webp", "width": "Wide" },
-        { "image": "assets/figma/thumb-work-henri.webp", "width": "Narrow" },
-        { "image": "assets/images/window.webp", "width": "Narrow" },
-        { "image": "assets/figma/work-kimball.webp", "width": "Wide" },
-        { "image": "assets/images/liquid.webp", "width": "Narrow" },
-        { "image": "assets/figma/thumb-work-mind.webp", "width": "Narrow" },
-        { "image": "assets/figma/banner.webp", "width": "Wide" }
+        {
+          "image": "assets/figma/work-henri.webp",
+          "width": "Wide"
+        },
+        {
+          "image": "assets/images/sofa.webp",
+          "width": "Narrow"
+        },
+        {
+          "image": "assets/images/portrait.webp",
+          "width": "Narrow"
+        },
+        {
+          "image": "assets/images/stairs.webp",
+          "width": "Wide"
+        },
+        {
+          "image": "assets/figma/thumb-work-henri.webp",
+          "width": "Narrow"
+        },
+        {
+          "image": "assets/images/window.webp",
+          "width": "Narrow"
+        },
+        {
+          "image": "assets/figma/work-kimball.webp",
+          "width": "Wide"
+        },
+        {
+          "image": "assets/images/liquid.webp",
+          "width": "Narrow"
+        },
+        {
+          "image": "assets/figma/thumb-work-mind.webp",
+          "width": "Narrow"
+        },
+        {
+          "image": "assets/figma/banner.webp",
+          "width": "Wide"
+        }
       ]
     },
     {
@@ -29,7 +64,11 @@
       "client": "Butter Baby Indonesia",
       "year": "",
       "info": "",
-      "scope": ["Brand Experience", "Event Production", "Event Operations"],
+      "scope": [
+        "Brand Experience",
+        "Event Production",
+        "Event Operations"
+      ],
       "result": "",
       "cover": "assets/figma/work-kimball.webp",
       "featured": true,
@@ -41,7 +80,11 @@
       "client": "Anami Films",
       "year": "",
       "info": "",
-      "scope": ["Brand Experience", "Creative Design Solution", "Out-of-Home"],
+      "scope": [
+        "Brand Experience",
+        "Creative Design Solution",
+        "Out-of-Home"
+      ],
       "result": "",
       "cover": "assets/figma/banner.webp",
       "featured": true,
@@ -61,15 +104,45 @@
     }
   ],
   "clients": [
-    { "name": "Northwind", "logo": "assets/clients/northwind.svg" },
-    { "name": "Lumen", "logo": "assets/clients/lumen.svg" },
-    { "name": "Orbit", "logo": "assets/clients/orbit.svg" },
-    { "name": "Kora", "logo": "assets/clients/kora.svg" },
-    { "name": "Fable", "logo": "assets/clients/fable.svg" },
-    { "name": "Atlas", "logo": "assets/clients/atlas.svg" },
-    { "name": "Verdant", "logo": "assets/clients/verdant.svg" },
-    { "name": "Pulse", "logo": "assets/clients/pulse.svg" },
-    { "name": "Halo", "logo": "assets/clients/halo.svg" },
-    { "name": "Mono", "logo": "assets/clients/mono.svg" }
+    {
+      "name": "Northwind",
+      "logo": "assets/clients/northwind.svg"
+    },
+    {
+      "name": "Lumen",
+      "logo": "assets/clients/lumen.svg"
+    },
+    {
+      "name": "Orbit",
+      "logo": "assets/clients/orbit.svg"
+    },
+    {
+      "name": "Kora",
+      "logo": "assets/clients/kora.svg"
+    },
+    {
+      "name": "Fable",
+      "logo": "assets/clients/fable.svg"
+    },
+    {
+      "name": "Atlas",
+      "logo": "assets/clients/atlas.svg"
+    },
+    {
+      "name": "Verdant",
+      "logo": "assets/clients/verdant.svg"
+    },
+    {
+      "name": "Pulse",
+      "logo": "assets/clients/pulse.svg"
+    },
+    {
+      "name": "Halo",
+      "logo": "assets/clients/halo.svg"
+    },
+    {
+      "name": "Mono",
+      "logo": "assets/clients/mono.svg"
+    }
   ]
 }
