@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter+Tight:wght@400;500;600&family=Instrument+Sans:wght@500..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/tailwind.css">
 </head>
 <!-- Built from Figma "Up+Above — Brand & Marketing Agency" (node 108:2).
@@ -28,16 +28,16 @@
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:bg-ink focus:px-4 focus:py-3 focus:text-black">Skip to content</a>
 
   <!-- Header (108:3) -->
-  <header class="home-header fixed inset-x-0 top-0 z-50 flex h-10 items-center bg-black px-6" data-header>
+  <header class="home-header fixed inset-x-0 top-0 z-50 flex h-10 items-center bg-black md:h-12 px-6" data-header>
     <a href="#top" class="home-brand is-hidden md:hidden" aria-label="Up+Above, home"><img src="assets/figma/logo-hero.svg" width="1392" height="246" alt="" class="block h-4 w-auto"></a>
-    <nav class="flex flex-1 items-center gap-6 t-micro font-medium text-white max-md:hidden" aria-label="Main">
+    <nav class="flex flex-1 items-center gap-6 t-nav font-medium text-white max-md:hidden" aria-label="Main">
       <a href="#about" class="link-draw hit">About <span class="text-lime">+</span> us</a>
       <a href="#services" class="link-draw hit">Services</a>
       <a href="work.html" class="link-draw hit">Works<span class="text-lime">+</span></a>
-      <a href="#clients" class="link-draw hit">Seen &amp; Trust</a>
+      <a href="#clients" class="link-draw hit">Seen &amp; Trusted</a>
     </nav>
-    <a href="#contact" class="home-talk link-draw hit flex items-center gap-1 t-micro font-medium text-lime max-md:hidden">
-      Let’s talk <img src="assets/figma/arrow.svg" width="16" height="11" alt="">
+    <a href="#contact" class="home-talk link-draw hit flex items-center gap-1.5 t-nav font-medium text-lime max-md:hidden">
+      Let’s talk <img src="assets/figma/arrow.svg" width="20" height="14" alt="">
     </a>
     <button type="button" class="home-burger md:hidden" aria-label="Menu" aria-expanded="false" aria-controls="home-menu" data-menu-toggle><span></span><span></span></button>
   </header>
@@ -48,17 +48,17 @@
       <a href="#about" class="home-menu-link" data-menu-link>About + us</a>
       <a href="#services" class="home-menu-link" data-menu-link>Services</a>
       <a href="work.html" class="home-menu-link" data-menu-link>Works+</a>
-      <a href="#clients" class="home-menu-link" data-menu-link>Seen &amp; Trust</a>
+      <a href="#clients" class="home-menu-link" data-menu-link>Seen &amp; Trusted</a>
       <div class="home-menu-foot" data-menu-link>
         <a href="#contact" class="home-menu-cta">Let’s talk <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
         <p class="home-menu-label">Social</p>
-        <a href="#" class="home-menu-social">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
-        <a href="#" class="home-menu-social">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+        <a href="https://www.instagram.com/upandabove_id/" target="_blank" rel="noopener" class="home-menu-social">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+        <a href="https://www.linkedin.com/company/upandabove-agency/" target="_blank" rel="noopener" class="home-menu-social">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
       </div>
     </nav>
   </div>
 
-  <main id="main" class="flex flex-col gap-6 pt-16">
+  <main id="main" class="flex flex-col gap-6 pt-16 md:pt-[72px]">
 
     <!-- Hero wordmark (108:17) -->
     <section id="top" class="px-6" aria-label="Up+Above">
@@ -79,13 +79,16 @@
     <section id="about" aria-label="Who we are" class="bg-black px-6 pb-[var(--space-section)] pt-[clamp(48px,round(down,4.4vw,4px),64px)]">
       <div class="flex flex-col items-start gap-8 md:flex-row md:justify-between">
         <p class="t-micro text-lime">(Who we are)</p>
-        <p class="home-statement w-full text-[#f2f2ec] md:w-[82.83%]" data-words>
+        <div class="w-full md:w-[82.83%]">
+          <h2 class="home-about-title" data-words>A strategic creative company</h2>
+          <p class="home-statement text-[#f2f2ec] md:pr-16" data-words>
             We are your <span class="hl">uprising brain<span class="text-lime">+</span>butter</span> partner
             <img src="assets/figma/pill-1.webp" width="114" height="53" alt="" class="home-pill">
             that helps you and your brand <span class="hl">upscale</span>
             <img src="assets/figma/pill-2.webp" width="114" height="53" alt="" class="home-pill">
             by connecting <span class="text-lime">+</span> strategy with <span class="hl">purpose</span>.
           </p>
+        </div>
       </div>
     </section>
 
@@ -93,7 +96,8 @@
     <section id="framework" class="bg-black px-6 pb-[var(--space-section)]" aria-label="Framework">
       <div class="flex flex-col items-start gap-8 md:flex-row md:justify-between">
         <p class="t-micro text-lime">(The U+A way)</p>
-        <div class="fw-flow w-full md:w-[82.83%]" data-framework>
+        <div class="w-full md:w-[82.83%] md:pr-16">
+        <div class="fw-flow" data-framework>
           <div class="fw-stage">
             <p class="fw-cap">We drive business <span class="hl">top funnel</span></p>
             <div class="fw-body"><div class="fw-steps"><p>Brand strategy</p><span class="fw-go" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="16"/><path d="M13 9l7 7-7 7" fill="none" stroke="#0B0B0A" stroke-width="2.4" stroke-linecap="square"/></svg></span><p>Brand experience</p></div></div>
@@ -110,29 +114,31 @@
             <div class="fw-node"><span class="fw-dot"></span><span class="fw-name">Orchestrate</span></div>
           </div>
         </div>
+        </div>
       </div>
     </section>
 
-    <!-- Compound: the U+A sub-services (content from the feedback image). Dashed curves flow behind each one. -->
-    <section id="compound" class="bg-black px-6 pb-[var(--space-section)]" aria-label="Our compound">
+    <!-- Compound: the two U+A sub-services, small and side by side. On hover a column grows and shows its picture (placeholders until the final images arrive). -->
+    <section id="compound" class="bg-black px-6 pb-[calc(var(--space-section)/2)]" aria-label="Our compound">
       <div class="flex flex-col items-start gap-8 md:flex-row md:justify-between">
         <p class="t-micro text-lime">(Our compound)</p>
-        <div class="w-full md:w-[82.83%]">
-          <article class="cmp-row" data-reveal>
-            <svg class="cmp-line" viewBox="0 0 1153 240" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 160 C 220 40, 420 240, 700 150 S 1040 20, 1180 110"/></svg>
-            <h3 class="cmp-name">U<span class="text-lime">+</span>A <span class="hl">Roster</span></h3>
-            <div class="cmp-copy">
+        <div class="cmp-grid w-full md:w-[82.83%] md:pr-16">
+          <article class="cmp" data-reveal>
+            <div class="cmp-in">
+              <h3 class="cmp-name"><span class="cmp-no" aria-hidden="true">1</span>U<span class="text-lime">+</span>A <span class="hl">Roster</span></h3>
               <p class="cmp-desc">Personal brand representation for creative industry leaders.</p>
               <p class="cmp-tag">For the figures who are the brand.</p>
             </div>
+            <span class="cmp-img" aria-hidden="true"><img src="assets/figma/thumb-work-kimball.webp" width="270" height="320" alt="" loading="lazy"></span>
           </article>
-          <article class="cmp-row cmp-row--flip" data-reveal>
-            <svg class="cmp-line" viewBox="0 0 1153 240" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 90 C 260 220, 520 20, 800 120 S 1080 220, 1180 60"/></svg>
-            <h3 class="cmp-name">Up <span class="hl">Market</span><span class="cmp-plus">+</span></h3>
-            <div class="cmp-copy">
+          <article class="cmp" data-reveal>
+            <div class="cmp-in">
+              <h3 class="cmp-name"><span class="cmp-no" aria-hidden="true">2</span>Up <span class="hl">Market</span><span class="cmp-plus">+</span></h3>
               <p class="cmp-desc">Market provider partner.</p>
               <p class="cmp-tag">We curate market based on your crowd and momentum.</p>
+              <a href="https://www.instagram.com/upmarket_id/" target="_blank" rel="noopener" class="cmp-cta link-draw hit">IG Upmarket <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
             </div>
+            <span class="cmp-img" aria-hidden="true"><img src="assets/figma/thumb-work-henri.webp" width="270" height="320" alt="" loading="lazy"></span>
           </article>
         </div>
       </div>
@@ -146,31 +152,43 @@
         <div class="relative flex flex-col gap-[clamp(40px,6.111vw,88px)] md:w-[82.83%]">
           <div class="flex flex-col gap-6 md:pr-[calc(270*var(--px)+24px)]" data-services>
             <div class="home-svc is-open" data-svc data-img="assets/figma/thumb-service.webp">
+              <p class="svc-phase">Dissect <svg class="svc-arrow" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M14 6.5H3.3A1.33 1.33 0 0 1 2 5.17V1M10.67 3.17 14 6.5l-3.33 3.33"/></svg></p>
               <h3><button type="button" class="home-svc-title" aria-expanded="true" aria-controls="svc-1" data-svc-trigger>Brand &amp; <span class="hl">marketing</span> consultancy</button></h3>
-              <ul id="svc-1" class="home-svc-panel" data-svc-panel>
+              <div id="svc-1" class="home-svc-panel" data-svc-panel>
+                <p class="svc-note">Finding real challenge and build the strategy around value, purpose and positioning that last.</p>
+                <ul>
                 <li data-img="assets/figma/thumb-service.webp">Brand audit</li>
                 <li data-img="assets/figma/thumb-work-kimball.webp">Brand communication strategy</li>
                 <li data-img="assets/figma/thumb-work-mind.webp">Corporate branding strategy</li>
                 <li data-img="assets/figma/thumb-banner.webp">Personal branding</li>
                 <li data-img="assets/figma/thumb-work-henri.webp">Integrated marketing plan</li>
               </ul>
+              </div>
             </div>
             <div class="home-svc" data-svc data-img="assets/figma/thumb-work-henri.webp">
+              <p class="svc-phase">Anchor <svg class="svc-arrow" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M14 6.5H3.3A1.33 1.33 0 0 1 2 5.17V1M10.67 3.17 14 6.5l-3.33 3.33"/></svg></p>
               <h3><button type="button" class="home-svc-title" aria-expanded="false" aria-controls="svc-2" data-svc-trigger>Campaign &amp; <span class="hl">brand</span> experience</button></h3>
-              <ul id="svc-2" class="home-svc-panel" data-svc-panel>
+              <div id="svc-2" class="home-svc-panel" data-svc-panel>
+                <p class="svc-note">Bring the strategy to life where people can see and experience the journey.</p>
+                <ul>
                 <li data-img="assets/figma/thumb-work-henri.webp">Campaign strategy, concept &amp; orchestration</li>
                 <li data-img="assets/figma/thumb-banner.webp">Activations &amp; events</li>
                 <li data-img="assets/figma/thumb-work-mind.webp">Social media &amp; content</li>
               </ul>
+              </div>
             </div>
             <div class="home-svc" data-svc data-img="assets/figma/thumb-work-kimball.webp">
+              <p class="svc-phase">Orchestrate <svg class="svc-arrow" viewBox="0 0 16 11" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square" aria-hidden="true"><path d="M14 6.5H3.3A1.33 1.33 0 0 1 2 5.17V1M10.67 3.17 14 6.5l-3.33 3.33"/></svg></p>
               <h3><button type="button" class="home-svc-title" aria-expanded="false" aria-controls="svc-3" data-svc-trigger>Creative &amp; <span class="hl">design</span></button></h3>
-              <ul id="svc-3" class="home-svc-panel" data-svc-panel>
+              <div id="svc-3" class="home-svc-panel" data-svc-panel>
+                <p class="svc-note">Making the brand visible, heard and remembered, everywhere it shows up.</p>
+                <ul>
                 <li data-img="assets/figma/thumb-work-kimball.webp">Visual identity &amp; design</li>
                 <li data-img="assets/figma/thumb-work-mind.webp">Creative design solution</li>
                 <li data-img="assets/figma/thumb-service.webp">Digital &amp; media</li>
                 <li data-img="assets/figma/thumb-banner.webp">Photo &amp; videography</li>
               </ul>
+              </div>
             </div>
           </div>
 
@@ -225,7 +243,7 @@
     <!-- Clients (108:167) -->
     <section id="clients" class="flex flex-col gap-10 bg-black px-6 py-[var(--space-section)]">
       <div class="flex min-h-[82px] items-end pb-3">
-        <h2 class="home-h2" data-split>Seen &amp; <span class="hl">Trust</span></h2>
+        <h2 class="home-h2" data-split>Seen &amp; <span class="hl">Trusted</span></h2>
       </div>
       <!-- One row, looping; the JS clones the row for the seamless loop. -->
       <div class="home-clients" data-clients>
@@ -242,19 +260,19 @@
   <!-- Footer (108:193) -->
   <footer id="contact" class="bg-lime text-[#0b0b0a]" data-nav-light>
     <div class="grid gap-y-12 px-6 pt-[clamp(72px,round(down,7.778vw,4px),112px)] md:grid-cols-[1fr_42.38%] md:grid-rows-[minmax(calc(196.94*var(--px)),auto)] md:gap-x-6">
-      <h2 class="home-footer-h" data-split>Let’s make your brand <span class="hl">rise up</span> and go <span class="hl">above and beyond</span>.</h2>
+      <h2 class="home-footer-h" data-split>Let’s make your brand <span class="hl">rise&nbsp;up</span>, go <span class="hl">above</span> &amp; <span class="hl">beyond</span>.</h2>
       <div class="home-contact">
         <div>
           <p class="home-contact-label">Social</p>
           <ul class="home-contact-links">
-            <li><a href="#">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
-            <li><a href="#">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+            <li><a href="https://www.instagram.com/upandabove_id/" target="_blank" rel="noopener">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/company/upandabove-agency/" target="_blank" rel="noopener">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
           </ul>
         </div>
         <div>
           <p class="home-contact-label">Contact</p>
           <ul class="home-contact-links">
-            <li><a href="mailto:info@upandabove.id">Email us <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+            <li><a href="mailto:marketing.communications@upandabove.id">Email us <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
           </ul>
         </div>
       </div>
@@ -263,8 +281,6 @@
     <div class="grid px-6 pt-[clamp(64px,round(down,10vw,4px),144px)] md:grid-cols-[1fr_42.38%] md:gap-x-6">
       <p class="flex flex-wrap gap-6 t-micro md:col-start-2">
         <span>© Up+Above 2026.</span>
-        <a href="#" class="link-draw hit">Privacy policy</a>
-        <a href="#" class="link-draw hit">Terms &amp; conditions</a>
         <span>Designed byParvis</span>
       </p>
     </div>

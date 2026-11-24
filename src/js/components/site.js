@@ -2,9 +2,10 @@
 // "View detail" cursor over work images.
 import { gsap, lenis, reduce, EASE_IN_OUT, EASE_OUT } from '../lib/motion.js';
 
-const HEADER = 40;
+// The header is 40px on a phone and 48px from 768px up.
+const headerHeight = () => (window.matchMedia('(min-width: 768px)').matches ? 48 : 40);
 
-// Anchor links glide via Lenis and stop below the 40px header.
+// Anchor links glide via Lenis and stop below the header.
 export function initAnchors() {
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href^="#"]');
@@ -13,8 +14,8 @@ export function initAnchors() {
     const target = hash.length > 1 && document.querySelector(hash);
     if (!target) return;
     e.preventDefault();
-    if (lenis) lenis.scrollTo(target, { offset: -HEADER, duration: 1.4 });
-    else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - HEADER, behavior: 'smooth' });
+    if (lenis) lenis.scrollTo(target, { offset: -headerHeight(), duration: 1.4 });
+    else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - headerHeight(), behavior: 'smooth' });
   });
 }
 
@@ -119,8 +120,8 @@ export function initTransitions() {
   const toHash = () => {
     const target = location.hash.length > 1 && document.querySelector(location.hash);
     if (!target) return;
-    if (lenis) lenis.scrollTo(target, { offset: -HEADER, immediate: true, force: true });
-    else window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY - HEADER);
+    if (lenis) lenis.scrollTo(target, { offset: -headerHeight(), immediate: true, force: true });
+    else window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY - headerHeight());
   };
   toHash();
   document.fonts.ready.then(toHash);

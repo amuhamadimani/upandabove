@@ -91,11 +91,21 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 .hit { position: relative; }
 .hit::before { content: ""; position: absolute; inset: -14px -8px; }
 .t-micro { font-size: var(--fs-micro); line-height: var(--lh-micro); letter-spacing: 0; }
+.t-nav { font-size: 15px; line-height: 20px; letter-spacing: 0; } /* header menu: 25% bigger than the old 12px */
 .t-small { font-size: var(--fs-small); line-height: var(--lh-small); letter-spacing: -0.01em; }
 .t-body { font-size: var(--fs-body); line-height: var(--lh-body); letter-spacing: -0.01em; }
 .home-mask { line-height: 0; }
 .js .home-mask > img { visibility: hidden; }
 
+.home-about-title {
+  margin-bottom: 24px;
+  font-family: var(--font-title);
+  font-weight: var(--title-weight);
+  font-size: var(--fs-name);
+  line-height: var(--lh-name);
+  letter-spacing: -0.02em;
+  color: #fff;
+}
 .home-statement {
   font-size: var(--fs-statement);
   line-height: var(--lh-statement);
@@ -106,7 +116,15 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 .home-header nav a { transition: color 0.3s var(--ease-out); }
 .home-header nav a:hover, .home-header nav a:focus-visible { color: #C8FF00; }
 /* Highlight words inside a title: Bricolage Grotesque Bold among Inter Tight Medium. */
-.home .hl { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; }
+.home .hl { font-family: var(--font-hl, var(--font-display)); font-weight: 700; letter-spacing: -0.02em; }
+/* Review preview: ?fontpreview on the address bar switches the highlight words between
+   option 1 (Instrument Sans, tight) and option 2 (Bricolage Grotesque, the current one). */
+html[data-hl="1"] .home { --font-hl: "Instrument Sans", sans-serif; }
+html[data-hl="1"] .home .hl { letter-spacing: -0.035em; }
+.hl-switch { position: fixed; left: 16px; bottom: 16px; z-index: 95; display: flex; align-items: center; gap: 4px; padding: 6px; border-radius: 999px; background: #fff; color: #0B0B0A; font: 500 13px/1 "Inter Tight", sans-serif; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4); }
+.hl-switch span { padding: 0 8px 0 10px; opacity: 0.6; }
+.hl-switch button { padding: 10px 14px; border-radius: 999px; }
+.hl-switch button[aria-pressed="true"] { background: #0B0B0A; color: #C8FF00; }
 .home-pill {
   display: inline-block;
   width: 1.9em;
@@ -143,6 +161,12 @@ body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 .home-svc-title { transition: color 0.4s ease; }
 .home-svc-title:hover, .home-svc-title:focus-visible { color: #000; }
 
+/* Phase above each service (Dissect, Anchor, Orchestrate) and its short description. */
+.svc-phase { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-family: var(--font-title); font-weight: 500; font-size: var(--fs-small); line-height: var(--lh-small); letter-spacing: -0.01em; color: rgba(0, 0, 0, 0.5); transition: color 0.4s ease; }
+.svc-arrow { flex: none; width: 16px; height: 11px; transition: transform 0.5s var(--ease-out); }
+.home-svc.is-open .svc-phase, .home-svc:hover .svc-phase { color: #000; }
+.home-svc:hover .svc-arrow { transform: translateX(4px); }
+.svc-note { max-width: 36em; margin-top: 8px; font-size: var(--fs-body); line-height: var(--lh-body); letter-spacing: -0.01em; color: rgba(0, 0, 0, 0.72); }
 .home-svc-panel { height: 0; overflow: hidden; }
 .home-svc.is-open > .home-svc-panel { height: auto; }
 .home-svc-panel li {
@@ -444,6 +468,19 @@ html.is-leaving, html.is-leaving * { cursor: progress !important; }
   .fw-node { align-items: center; margin-top: 32px; }
 }
 
+/* The framework is 20% smaller than the Figma frame so it no longer crowds the right edge. */
+@media (min-width: 768px) {
+  .fw-flow {
+    --fs-step: max(16px, round(down, calc(25.6 * var(--px)), 4px));
+    --lh-step: round(calc(var(--fs-step) * 1.1), 4px);
+  }
+  .fw-cap { font-size: 14px; line-height: 20px; }
+  .fw-go { width: 24px; height: 24px; }
+  .fw-plus svg { width: max(64px, round(down, calc(102.4 * var(--px)), 4px)); }
+  .fw-body { min-height: max(96px, round(down, calc(140.8 * var(--px)), 4px)); }
+  .fw-steps { column-gap: max(12px, round(down, calc(19.2 * var(--px)), 4px)); }
+}
+
 /* Entrance: stages rise in one after another, then the line draws and the dots pop. */
 .js .fw-cap, .js .fw-body, .js .fw-name { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
 .js .fw-dot { transform: scale(0); }
@@ -475,33 +512,37 @@ html.is-leaving, html.is-leaving * { cursor: progress !important; }
   .fw-stage:hover .fw-dot { transform: scale(1.5); }
 }
 
-/* ---- Compound: U+A Roster and Up Market ---- */
-.cmp-row { position: relative; display: grid; gap: 24px; padding: 48px 0; border-top: 1px solid var(--line); }
-.cmp-row:last-child { border-bottom: 1px solid var(--line); }
-@media (min-width: 768px) {
-  .cmp-row { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 0 24px; padding: 64px 0; }
-  .cmp-row--flip .cmp-name { order: 2; }
+/* ---- Compound: U+A Roster and Up Market, small and side by side (50% of the old size) ----
+   On hover a column grows and its picture wipes in. The pictures are placeholders. */
+.cmp-grid {
+  --fs-cmp: max(20px, round(down, calc(28 * var(--px)), 4px));
+  --lh-cmp: round(calc(var(--fs-cmp) * 1.1), 4px);
+  display: grid; gap: 40px 24px;
 }
-.cmp-name, .cmp-copy { position: relative; z-index: 1; }
-.cmp-name { font-size: var(--fs-statement); line-height: var(--lh-statement); letter-spacing: -0.02em; color: #fff; }
+@media (min-width: 768px) { .cmp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.cmp { position: relative; }
+.cmp-in { position: relative; z-index: 1; transform-origin: 0 0; transition: transform 0.6s var(--ease-out), opacity 0.4s var(--ease-out); }
+.cmp-name { font-size: var(--fs-cmp); line-height: var(--lh-cmp); letter-spacing: -0.02em; color: #fff; }
 .home .cmp-name { font-family: var(--font-title); font-weight: var(--title-weight); }
-.cmp-plus { margin-left: 4px; color: #C8FF00; font-size: 0.5em; vertical-align: super; }
-.cmp-desc, .cmp-tag { font-size: var(--fs-name); line-height: var(--lh-name); letter-spacing: -0.02em; }
+.cmp-no, .cmp-plus { color: #C8FF00; font-size: 0.5em; vertical-align: super; }
+.cmp-no { margin-right: 6px; }
+.cmp-plus { margin-left: 4px; }
+.cmp-desc, .cmp-tag { font-size: var(--fs-body); line-height: var(--lh-body); letter-spacing: -0.01em; }
 .home .cmp-desc, .home .cmp-tag { font-family: var(--font-title); font-weight: var(--title-weight); }
-.cmp-desc { color: #f2f2ec; }
-.cmp-tag { margin-top: 16px; color: #C8FF00; transition: transform 0.6s var(--ease-out); }
-.cmp-row:hover .cmp-tag { transform: translateX(8px); }
-
-/* Dashed curves drifting behind each sub-service; they run faster and turn lime on hover. */
-.cmp-line { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
-.cmp-line path {
-  fill: none; stroke: rgba(242, 242, 236, 0.45); stroke-width: 1; vector-effect: non-scaling-stroke;
-  stroke-dasharray: 4 10;
-  animation: cmp-dash 18s linear infinite;
-  transition: stroke 0.5s var(--ease-out);
+@media (min-width: 768px) { .cmp-desc, .cmp-tag { max-width: 62%; } } /* leaves room for the picture */
+.cmp-desc { margin-top: 16px; color: #f2f2ec; }
+.cmp-tag { margin-top: 4px; color: #C8FF00; }
+.cmp-cta { display: inline-flex; align-items: baseline; gap: 0.3em; margin-top: 16px; font-family: var(--font-title); font-weight: var(--title-weight); font-size: var(--fs-body); line-height: var(--lh-body); letter-spacing: -0.01em; color: #C8FF00; }
+.cmp-cta:hover .home-arrow, .cmp-cta:focus-visible .home-arrow { transform: translate(0.12em, -0.12em); }
+.cmp-img { display: none; position: absolute; top: 0; right: 0; z-index: 2; width: clamp(96px, 11.1vw, 176px); aspect-ratio: 270 / 320; overflow: hidden; background: #151514; clip-path: inset(100% 0 0 0); transition: clip-path 0.7s var(--ease-out); pointer-events: none; }
+.cmp-img img { display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.15); transition: transform 0.9s var(--ease-out); }
+@media (min-width: 768px) and (hover: hover) {
+  .cmp-img { display: block; }
+  .cmp-grid:hover .cmp-in { opacity: 0.45; }
+  .cmp-grid .cmp:hover .cmp-in { opacity: 1; transform: scale(1.12); }
+  .cmp:hover .cmp-img { clip-path: inset(0); }
+  .cmp:hover .cmp-img img { transform: none; }
 }
-.cmp-row:hover .cmp-line path { stroke: #C8FF00; animation-duration: 5s; }
-@keyframes cmp-dash { to { stroke-dashoffset: -280; } }
 
 @media (prefers-reduced-motion: reduce) {
   .js [data-split], .js [data-reveal] { visibility: visible; opacity: 1; transform: none; }
@@ -509,8 +550,7 @@ html.is-leaving, html.is-leaving * { cursor: progress !important; }
   .home-svc-title { transition: none; }
   .js .fw-cap, .js .fw-body, .js .fw-name { opacity: 1; transform: none; transition: none; }
   .js .fw-dot, .js .fw-plus svg, .fw-node::before { transform: none; transition: none; }
-  .cmp-line path { animation: none; }
-  .cmp-tag { transition: none; }
+  .cmp-in, .cmp-img, .cmp-img img { transition: none; }
   .page-curtain svg { animation: none; }
   .home-clients { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
   .home-clients-track { animation: none; }

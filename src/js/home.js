@@ -49,12 +49,10 @@ function initImages() {
   });
 }
 
-// About statement: every word starts at 60% and eases up to 100%, one after another,
+// About title and statement: every word starts at 60% and eases up to 100%, one after another,
 // as the paragraph scrolls up (the scrub lags a little so it stays smooth); all of
 // them are at full strength once its top reaches the upper third of the screen.
-function initStatement() {
-  const el = document.querySelector('[data-words]');
-  if (!el || reduce) return;
+function initWords(el) {
   const words = [];
   Array.from(el.childNodes).forEach((node) => {
     if (node.nodeType !== Node.TEXT_NODE) { words.push(node); return; }
@@ -75,6 +73,12 @@ function initStatement() {
     ease: 'none',
     scrollTrigger: { trigger: el, start: 'top 85%', end: 'top 35%', scrub: 0.8 },
   });
+}
+
+// The About title and the statement under it both use it, so the title lights up first.
+function initStatement() {
+  if (reduce) return;
+  document.querySelectorAll('[data-words]').forEach(initWords);
 }
 
 // Picture frame that swaps its image. Every picture is fetched and decoded up
@@ -229,7 +233,29 @@ function initClients() {
   });
 }
 
+// Review only: ?fontpreview on the address adds a switch between the two highlight-word fonts
+// (1 = Instrument Sans, 2 = Bricolage Grotesque); ?hl=1 or ?hl=2 sets one without the switch.
+function initFontPreview() {
+  const params = new URLSearchParams(location.search);
+  if (!params.has('fontpreview') && !params.has('hl')) return;
+  const root = document.documentElement;
+  const apply = (value) => {
+    if (value === '1') root.dataset.hl = '1'; else delete root.dataset.hl;
+    box?.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.hl === (value === '1' ? '1' : '2'))));
+  };
+  let box = null;
+  if (params.has('fontpreview')) {
+    box = document.createElement('div');
+    box.className = 'hl-switch';
+    box.innerHTML = '<span>Highlight font</span><button type="button" data-hl="1">1 Instrument Sans</button><button type="button" data-hl="2">2 Bricolage</button>';
+    box.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) apply(b.dataset.hl); });
+    document.body.append(box);
+  }
+  apply(params.get('hl') === '1' ? '1' : '2');
+}
+
 initAnchors();
+initFontPreview();
 initTransitions();
 initMenu();
 initServices();

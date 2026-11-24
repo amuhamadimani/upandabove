@@ -27,16 +27,16 @@
   <div class="page-curtain" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.9727 0H14.7471C14.7505 2.63025 14.8307 5.14353 14.388 7.74646C14.241 8.61351 14.2026 9.52316 14.0437 10.3993C14.6092 10.2476 15.3362 10.2111 15.922 10.1043C18.6297 9.61049 21.259 9.68915 24 9.69265V14.4811H14.1596C14.3536 15.9983 14.6397 17.7462 14.716 19.2522C14.7827 20.5661 14.7493 22.1352 14.7471 23.4683C14.755 23.6825 14.7545 23.7383 14.716 23.9482C14.6075 24.0293 10.4732 23.9912 9.9727 23.9902V14.4811H0V9.69265C1.64926 9.69028 3.4881 9.62003 5.11587 9.75323C6.57807 9.87272 8.54392 10.0905 9.9727 10.4045V0Z"/></svg></div>
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:bg-ink focus:px-4 focus:py-3 focus:text-black">Skip to content</a>
 
-  <header class="home-header fixed inset-x-0 top-0 z-50 flex h-10 items-center bg-black px-6" data-header>
+  <header class="home-header fixed inset-x-0 top-0 z-50 flex h-10 items-center bg-black md:h-12 px-6" data-header>
     <a href="index.html" class="home-brand md:hidden" aria-label="Up+Above, home"><img src="assets/figma/logo-hero.svg" width="1392" height="246" alt="" class="block h-4 w-auto"></a>
-    <nav class="flex flex-1 items-center gap-6 t-micro font-medium text-white max-md:hidden" aria-label="Main">
+    <nav class="flex flex-1 items-center gap-6 t-nav font-medium text-white max-md:hidden" aria-label="Main">
       <a href="index.html#about" class="link-draw hit">About <span class="text-lime">+</span> us</a>
       <a href="index.html#services" class="link-draw hit">Services</a>
       <a href="work.html" class="link-draw hit" aria-current="page">Works<span class="text-lime">+</span></a>
-      <a href="index.html#clients" class="link-draw hit">Seen &amp; Trust</a>
+      <a href="index.html#clients" class="link-draw hit">Seen &amp; Trusted</a>
     </nav>
-    <a href="#contact" class="home-talk link-draw hit flex items-center gap-1 t-micro font-medium text-lime max-md:hidden">
-      Let’s talk <img src="assets/figma/arrow.svg" width="16" height="11" alt="">
+    <a href="#contact" class="home-talk link-draw hit flex items-center gap-1.5 t-nav font-medium text-lime max-md:hidden">
+      Let’s talk <img src="assets/figma/arrow.svg" width="20" height="14" alt="">
     </a>
     <button type="button" class="home-burger md:hidden" aria-label="Menu" aria-expanded="false" aria-controls="home-menu" data-menu-toggle><span></span><span></span></button>
   </header>
@@ -47,17 +47,17 @@
       <a href="index.html#about" class="home-menu-link" data-menu-link>About + us</a>
       <a href="index.html#services" class="home-menu-link" data-menu-link>Services</a>
       <a href="work.html" class="home-menu-link" aria-current="page" data-menu-link>Works+</a>
-      <a href="index.html#clients" class="home-menu-link" data-menu-link>Seen &amp; Trust</a>
+      <a href="index.html#clients" class="home-menu-link" data-menu-link>Seen &amp; Trusted</a>
       <div class="home-menu-foot" data-menu-link>
         <a href="#contact" class="home-menu-cta">Let’s talk <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
         <p class="home-menu-label">Social</p>
-        <a href="#" class="home-menu-social">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
-        <a href="#" class="home-menu-social">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+        <a href="https://www.instagram.com/upandabove_id/" target="_blank" rel="noopener" class="home-menu-social">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
+        <a href="https://www.linkedin.com/company/upandabove-agency/" target="_blank" rel="noopener" class="home-menu-social">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a>
       </div>
     </nav>
   </div>
 
-  <main id="main" class="pt-16">
+  <main id="main" class="pt-16 md:pt-[72px]">
     <div class="grid gap-10 px-6 pb-[var(--space-section)] pt-[clamp(32px,round(down,4vw,4px),64px)] md:grid-cols-[4fr_6fr] md:gap-6">
 
       <!-- Info: 40%, stays in view while the gallery scrolls. -->
@@ -120,14 +120,14 @@
         <div>
           <p class="home-contact-label">Social</p>
           <ul class="home-contact-links">
-            <li><a href="#">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
-            <li><a href="#">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+            <li><a href="https://www.instagram.com/upandabove_id/" target="_blank" rel="noopener">Instagram <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/company/upandabove-agency/" target="_blank" rel="noopener">LinkedIn <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
           </ul>
         </div>
         <div>
           <p class="home-contact-label">Contact</p>
           <ul class="home-contact-links">
-            <li><a href="mailto:info@upandabove.id">Email us <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
+            <li><a href="mailto:marketing.communications@upandabove.id">Email us <svg class="home-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M5 19L18.5 5.5M7.5 5H19v11.5"/></svg></a></li>
           </ul>
         </div>
       </div>
@@ -136,8 +136,6 @@
     <div class="grid px-6 pt-[clamp(64px,round(down,10vw,4px),144px)] md:grid-cols-[1fr_42.38%] md:gap-x-6">
       <p class="flex flex-wrap gap-6 t-micro md:col-start-2">
         <span>© Up+Above 2026.</span>
-        <a href="#" class="link-draw hit">Privacy policy</a>
-        <a href="#" class="link-draw hit">Terms &amp; conditions</a>
         <span>Designed byParvis</span>
       </p>
     </div>
