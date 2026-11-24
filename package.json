@@ -8,8 +8,9 @@
     "dev:css": "tailwindcss -i ./src/main.css -o ./dist/tailwind.css --minify --watch",
     "build:js": "esbuild src/js/home.js src/js/work.js --bundle --format=iife --outdir=dist --minify",
     "dev:js": "esbuild src/js/home.js src/js/work.js --bundle --format=iife --outdir=dist --watch",
-    "build": "npm run build:css && npm run build:js",
-    "dev": "npm run dev:css & npm run dev:js"
+    "build": "npm run build:css && npm run build:js && npm run build:site",
+    "dev": "npm run dev:css & npm run dev:js",
+    "build:site": "node scripts/build-site.mjs"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "autoprefixer": "^10.4.24",
     "esbuild": "^0.28.1",
     "postcss": "^8.5.6",
+    "sharp": "0.34.5",
     "tailwindcss": "^4.2.0"
   },
   "dependencies": {

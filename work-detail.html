@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>document.documentElement.classList.add('js');</script>
   <script>try{var d=document.documentElement;if(sessionStorage.getItem('page-transition')){sessionStorage.removeItem('page-transition');d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}</script>
+  <!-- content:head (scripts/build-site.mjs writes one page like this for every work in content/site.json) -->
   <title>IFFINA+ 2025 — Up+Above</title>
   <meta name="description" content="IFFINA+ 2025: brand strategy, brand identity and event concept for Mahala, by Up+Above.">
   <meta name="theme-color" content="#000000">
@@ -14,13 +15,14 @@
   <meta property="og:title" content="IFFINA+ 2025 — Up+Above">
   <meta property="og:description" content="Strengthened the IFFINA+ brand narrative with the Story of Origin.">
   <meta property="og:image" content="assets/figma/banner.webp">
+  <!-- /content:head -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/tailwind.css">
 </head>
-<!-- Project page preview: 40% info (sticky) and 60% gallery of up to 10 images, mixing one-image and two-image rows. Copy is placeholder. -->
+<!-- Project page: 40% info (sticky) and 60% gallery of up to 10 images, mixing one-image and two-image rows. -->
 <body class="home bg-black font-body text-ink">
   <div class="page-curtain" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.9727 0H14.7471C14.7505 2.63025 14.8307 5.14353 14.388 7.74646C14.241 8.61351 14.2026 9.52316 14.0437 10.3993C14.6092 10.2476 15.3362 10.2111 15.922 10.1043C18.6297 9.61049 21.259 9.68915 24 9.69265V14.4811H14.1596C14.3536 15.9983 14.6397 17.7462 14.716 19.2522C14.7827 20.5661 14.7493 22.1352 14.7471 23.4683C14.755 23.6825 14.7545 23.7383 14.716 23.9482C14.6075 24.0293 10.4732 23.9912 9.9727 23.9902V14.4811H0V9.69265C1.64926 9.69028 3.4881 9.62003 5.11587 9.75323C6.57807 9.87272 8.54392 10.0905 9.9727 10.4045V0Z"/></svg></div>
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:bg-ink focus:px-4 focus:py-3 focus:text-black">Skip to content</a>
@@ -61,6 +63,7 @@
       <!-- Info: 40%, stays in view while the gallery scrolls. -->
       <aside class="detail-info md:sticky md:top-[88px] md:self-start md:pr-10">
         <a href="work.html" class="detail-back link-draw"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M20 6v6H5M9 8l-4 4 4 4"/></svg> Back</a>
+        <!-- content:info -->
         <h1 class="detail-title" data-split><span class="hl">IFFINA+</span> 2025</h1>
 
         <div class="detail-block">
@@ -88,10 +91,12 @@
           <p class="detail-label">Result</p>
           <p class="detail-value">15,000+ visitors</p>
         </div>
+        <!-- /content:info -->
       </aside>
 
       <!-- Gallery: 60%, ten images in rows of one or two. -->
       <section class="detail-gallery" aria-label="Project images" data-gallery>
+        <!-- content:gallery -->
         <figure class="detail-fig detail-fig--wide"><img src="assets/figma/work-henri.webp" alt="IFFINA+ 2025: image 1" loading="lazy"></figure>
         <figure class="detail-fig detail-fig--tall"><img src="assets/images/sofa.webp" alt="IFFINA+ 2025: image 2" loading="lazy"></figure>
         <figure class="detail-fig detail-fig--tall"><img src="assets/images/portrait.webp" alt="IFFINA+ 2025: image 3" loading="lazy"></figure>
@@ -102,6 +107,7 @@
         <figure class="detail-fig detail-fig--tall"><img src="assets/images/liquid.webp" alt="IFFINA+ 2025: image 8" loading="lazy"></figure>
         <figure class="detail-fig detail-fig--tall"><img src="assets/figma/thumb-work-mind.webp" alt="IFFINA+ 2025: image 9" loading="lazy"></figure>
         <figure class="detail-fig detail-fig--wide"><img src="assets/figma/banner.webp" alt="IFFINA+ 2025: image 10" loading="lazy"></figure>
+        <!-- /content:gallery -->
       </section>
     </div>
   </main>

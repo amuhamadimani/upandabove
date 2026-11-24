@@ -189,6 +189,7 @@
       </div>
 
       <div class="grid gap-x-6 gap-y-10 md:grid-cols-2">
+        <!-- content:featured (scripts/build-site.mjs fills this from content/site.json) -->
         <a href="work-detail.html" class="home-work group">
           <span class="home-work-img"><img src="assets/figma/work-mind.webp" width="1600" height="841" alt="IFFINA+ 2025" loading="lazy"></span>
           <span class="home-work-meta">
@@ -217,6 +218,7 @@
             <span class="home-work-desc">Client name · Scope to be added</span>
           </span>
         </a>
+        <!-- /content:featured -->
       </div>
     </section>
 
@@ -225,11 +227,13 @@
       <div class="flex min-h-[82px] items-end pb-3">
         <h2 class="home-h2" data-split>Seen &amp; <span class="hl">Trust</span></h2>
       </div>
-      <!-- One row, looping. These are dummy logos (assets/clients/); swap each <img> for the client's real logo; the JS clones the row for the seamless loop. -->
+      <!-- One row, looping; the JS clones the row for the seamless loop. -->
       <div class="home-clients" data-clients>
         <ul class="home-clients-track" data-clients-track>
+          <!-- content:clients -->
           <li><a href="#" aria-label="Northwind"><img src="assets/clients/northwind.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="lumen"><img src="assets/clients/lumen.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="Orbit Labs"><img src="assets/clients/orbit.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="KORA"><img src="assets/clients/kora.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="Fable"><img src="assets/clients/fable.svg" alt="" loading="lazy"></a></li>
           <li><a href="#" aria-label="Atlas Co."><img src="assets/clients/atlas.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="Verdant"><img src="assets/clients/verdant.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="PULSE"><img src="assets/clients/pulse.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="halo"><img src="assets/clients/halo.svg" alt="" loading="lazy"></a></li><li><a href="#" aria-label="Monogram"><img src="assets/clients/mono.svg" alt="" loading="lazy"></a></li>
+          <!-- /content:clients -->
         </ul>
       </div>
     </section>
