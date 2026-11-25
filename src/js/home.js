@@ -44,6 +44,9 @@ function initImages() {
     ease: 'none',
     scrollTrigger: { trigger: banner, start: 'top top', end: 'bottom top', scrub: true },
   });
+  // The services picture unveils like the work frames (its vertical glide uses y, so this uses a clip instead).
+  const svcImg = document.querySelector('.home-svc-img');
+  if (svcImg) gsap.from(svcImg, { clipPath: 'inset(100% 0 0 0)', duration: 1.4, ease: 'power4.inOut', scrollTrigger: { trigger: svcImg, start: 'top 88%', once: true } });
   gsap.utils.toArray('.home-work-img').forEach((frame) => {
     gsap.from(frame, { clipPath: 'inset(100% 0 0 0)', duration: 1.4, ease: 'power4.inOut', scrollTrigger: { trigger: frame, start: 'top 88%', once: true } });
   });
@@ -204,14 +207,14 @@ function initServices() {
   });
 }
 
-// Framework: the flow plays once, when it scrolls into view.
+// Framework: the flow plays once, when it is well inside the screen (its top passes 55% of the height), so the whole sequence can be seen.
 function initFramework() {
   const flow = document.querySelector('[data-framework]');
   if (!flow) return;
   if (reduce) { flow.classList.add('is-in', 'is-done'); return; }
   ScrollTrigger.create({
     trigger: flow,
-    start: 'top 80%',
+    start: 'top 55%',
     once: true,
     onEnter: () => {
       flow.classList.add('is-in');
@@ -269,4 +272,7 @@ document.fonts.ready.then(() => {
   initStatement();
   initClients();
   initReveals();
+  // Fonts and the split text change the page height, so every scroll trigger measures again.
+  requestAnimationFrame(() => ScrollTrigger.refresh());
+  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
 });

@@ -1,6 +1,6 @@
 // Generic scroll reveals.
 //   [data-split]    headings: lines rise out of a mask, once, as they enter.
-//   [data-reveal]   blocks: fade up 24px, once.
+//   [data-reveal]   blocks: fade up 24px, once (data-reveal-delay="0.12" waits that many seconds).
 //   [data-parallax] images: drift slightly slower than the page.
 import { gsap, SplitText, reduce, EASE_OUT } from '../lib/motion.js';
 
@@ -33,6 +33,7 @@ export function initReveals() {
       opacity: 1,
       y: 0,
       duration: 1,
+      delay: Number(el.dataset.revealDelay) || 0,
       ease: EASE_OUT,
       scrollTrigger: { trigger: el, start: 'top 88%', once: true },
     });
